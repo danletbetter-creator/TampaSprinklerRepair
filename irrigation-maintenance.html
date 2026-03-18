@@ -696,4 +696,11 @@
       const target = document.querySelector(a.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        document.getElementById('
+        document.getElementById('main-nav').classList.remove('open');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
