@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irrigation Maintenance Plans | South Tampa & Hyde Park | Water Oak Irrigation</title>
+  <meta name="description" content="Professional irrigation preventative maintenance for South Tampa, Hyde Park, Davis Island & affluent neighborhoods. Annual plans, seasonal service, system optimization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Schema Markup for Maintenance Service Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Irrigation Preventative Maintenance",
+    "description": "Professional irrigation system maintenance, inspections, and preventative service for South Tampa homeowners including seasonal adjustments, system optimization, and repair prevention.",
+    "url": "https://wateroakirrigation.com/irrigation-maintenance.html",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Water Oak Irrigation",
+      "telephone": "(813) 499-8485",
+      "email": "Dan@wateroakirrigation.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tampa",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": ["Hyde Park", "Davis Island", "Palma Ceia", "Culbreath Isles", "South Tampa", "Harbour Island"],
+    "serviceType": "Irrigation Maintenance",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "150"
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep: #1a2e6b;
+      --blue-mid: #2341a0;
+      --blue-bright: #2f55c8;
+      --blue-light: #6b8fe0;
+      --green-deep: #1a5c32;
+      --green-mid: #237a44;
+      --green-bright: #2da052;
+      --green-light: #5dc47a;
+      --gold: #f0c040;
+      --cream: #f4f7ff;
+      --white: #ffffff;
+      --dark: #0e1a3a;
+      --gray: #5a6a8a;
+      --gray-light: #e2e8f8;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 40px; height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(26, 46, 107, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107,143,224,0.2);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child {
+      font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+      color: var(--white); letter-spacing: 0.02em;
+    }
+    .logo-text span:last-child {
+      font-size: 10px; color: var(--green-light); letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a {
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--green-light); }
+    .nav-phone { color: var(--gold) !important; font-weight: 700 !important; }
+    .btn-header {
+      background: var(--green-bright); color: white !important; padding: 9px 20px;
+      border-radius: 5px; font-size: 13px !important; font-weight: 700 !important;
+      letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.2s !important;
+      text-decoration: none;
+    }
+    .btn-header:hover { background: var(--green-deep) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      background: var(--blue-deep);
+      padding-top: 76px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 65% 50%, rgba(35,65,160,0.6) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 5% 70%, rgba(45,160,82,0.2) 0%, transparent 60%),
+        linear-gradient(135deg, #0c1840 0%, #1a2e6b 55%, #0e2050 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(107,143,224,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(107,143,224,0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .hero-content {
+      position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;
+      padding: 80px 40px; width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(45,160,82,0.15); border: 1px solid rgba(93,196,122,0.35);
+      color: var(--green-light); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; padding: 7px 16px;
+      border-radius: 100px; margin-bottom: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--green-light); border-radius: 50%; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 66px); font-weight: 900; line-height: 1.05;
+      color: white; margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    h1 em { font-style: italic; color: var(--green-light); }
+    .hero-sub {
+      font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.6);
+      margin-bottom: 40px; max-width: 520px; font-weight: 300;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-bright); color: white; text-decoration: none;
+      padding: 15px 30px; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px;
+      transition: all 0.25s; border: 2px solid transparent;
+    }
+    .btn-primary:hover {
+      background: var(--green-deep); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45,160,82,0.4);
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: white; text-decoration: none;
+      padding: 15px 30px; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px;
+      border: 2px solid rgba(255,255,255,0.25); transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--green-light); color: var(--green-light); }
+
+    /* SECTIONS */
+    section { padding: 96px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--blue-bright); margin-bottom: 14px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 50px); font-weight: 900; line-height: 1.1;
+      color: var(--dark); margin-bottom: 18px;
+    }
+    .section-intro { font-size: 16px; line-height: 1.75; color: var(--gray); max-width: 580px; font-weight: 300; }
+
+    /* PLANS SECTION */
+    .plans-section { background: var(--white); }
+    .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+    .plan-card {
+      background: var(--cream); border-radius: 14px; padding: 40px;
+      border: 2px solid var(--gray-light); transition: all 0.3s; position: relative;
+    }
+    .plan-card:hover {
+      transform: translateY(-8px); border-color: var(--green-bright);
+      box-shadow: 0 20px 50px rgba(45,160,82,0.15);
+    }
+    .plan-badge {
+      display: inline-block; background: var(--green-bright); color: white;
+      font-size: 11px; font-weight: 700; padding: 6px 14px; border-radius: 4px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .plan-name { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+    .plan-price { font-size: 28px; font-weight: 700; color: var(--green-bright); margin-bottom: 20px; }
+    .plan-desc { font-size: 14px; line-height: 1.7; color: var(--gray); margin-bottom: 24px; }
+    .plan-features { list-style: none; margin-bottom: 28px; }
+    .plan-features li {
+      font-size: 13px; color: var(--dark); padding: 10px 0; border-bottom: 1px solid var(--gray-light);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .plan-features li::before { content: '✓'; color: var(--green-bright); font-weight: 700; flex-shrink: 0; }
+    .plan-card .btn-primary { width: 100%; justify-content: center; }
+
+    /* MAINTENANCE SECTIONS */
+    .maintenance-section { background: var(--cream); }
+    .maintenance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 56px; }
+    .maintenance-item { margin-bottom: 36px; }
+    .maintenance-item h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
+    .maintenance-item p { font-size: 14px; line-height: 1.8; color: var(--gray); }
+    .maintenance-item ul { margin: 16px 0; padding-left: 24px; }
+    .maintenance-item li { font-size: 14px; line-height: 1.8; color: var(--gray); margin-bottom: 8px; }
+
+    /* NEIGHBORHOODS */
+    .neighborhoods-section { background: var(--white); }
+    .neighborhoods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 52px; }
+    .neighborhood-card {
+      background: var(--cream); border-radius: 12px; padding: 28px;
+      border: 1px solid var(--gray-light); transition: all 0.3s;
+    }
+    .neighborhood-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,46,107,0.1); }
+    .neighborhood-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .neighborhood-card p { font-size: 13px; line-height: 1.7; color: var(--gray); }
+
+    /* FAQ */
+    .faq-section { background: var(--cream); }
+    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 52px; }
+    .faq-item { padding: 28px; background: var(--white); border-radius: 12px; border: 1px solid var(--gray-light); }
+    .faq-item h4 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .faq-item p { font-size: 13px; line-height: 1.7; color: var(--gray); }
+
+    /* CTA */
+    .cta-section { background: var(--green-bright); color: white; text-align: center; padding: 80px 40px; border-radius: 14px; margin: 80px 40px; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--dark); padding: 18px 40px;
+      display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; }
+    .trust-item span:first-child { color: var(--green-light); font-size: 17px; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* FOOTER */
+    footer { background: var(--dark); padding: 60px 40px 32px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: white; }
+    .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.4); max-width: 260px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--green-light); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.28); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      section { padding: 64px 20px; }
+      .plans-grid, .maintenance-grid, .neighborhoods-grid, .faq-grid { grid-template-columns: 1fr; gap: 36px; }
+      .maintenance-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .cta-section { margin: 40px 20px; }
+    }
+    @media (max-width: 560px) {
+      .neighborhoods-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">
+    <div class="logo-text">
+      <span>Water Oak Irrigation</span>
+      <span>Tampa Bay's Trusted Experts</span>
+    </div>
+  </a>
+  <nav id="main-nav">
+    <a href="/#services">Services</a>
+    <a href="/#areas">Service Areas</a>
+    <a href="/#blog">Tips & News</a>
+    <a href="/#contact">Contact</a>
+    <a href="tel:8134998485" class="nav-phone">☎ (813) 499-8485</a>
+    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-header" target="_blank" rel="noopener">Book Now</a>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🛡️ Preventative Maintenance Specialists</div>
+    <h1>Protect Your Irrigation System Year-Round</h1>
+    <p class="hero-sub">Professional preventative maintenance keeps your system running perfectly, prevents costly repairs, and extends equipment lifespan. Custom plans for South Tampa's luxury estates.</p>
+    <div class="hero-actions">
+      <a href="#plans" class="btn-primary">View Maintenance Plans</a>
+      <a href="tel:8134998485" class="btn-secondary">☎ Call for Consultation</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span>✓</span> Annual Inspections & Optimization</div>
+  <div class="trust-item"><span>✓</span> Seasonal Adjustments Included</div>
+  <div class="trust-item"><span>✓</span> 24/7 Emergency Support</div>
+  <div class="trust-item"><span>✓</span> Guaranteed Performance</div>
+</div>
+
+<!-- PLANS -->
+<section class="plans-section" id="plans">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Maintenance Plans</span>
+      <h2>Choose Your Protection Level</h2>
+      <p class="section-intro">Every South Tampa estate deserves a maintenance plan tailored to its system complexity and seasonal needs. Select the plan that matches your property.</p>
+    </div>
+
+    <div class="plans-grid">
+      <!-- ESSENTIAL PLAN -->
+      <div class="plan-card reveal">
+        <span class="plan-badge">Most Popular</span>
+        <h3 class="plan-name">Essential</h3>
+        <div class="plan-price">$75/year</div>
+        <p class="plan-desc">Annual irrigation inspection for residential properties.</p>
+        <ul class="plan-features">
+          <li>One annual irrigation inspection</li>
+          <li>System performance evaluation</li>
+          <li>Head & valve checks</li>
+          <li>Water efficiency audit</li>
+          <li>Repair recommendations report</li>
+          <li>Basic repairs (20% discount)</li>
+          <li>Priority service calls</li>
+        </ul>
+        <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Start Plan</a>
+      </div>
+
+      <!-- PREMIUM PLAN -->
+      <div class="plan-card reveal">
+        <span class="plan-badge">Recommended</span>
+        <h3 class="plan-name">Premium</h3>
+        <div class="plan-price">$180/year</div>
+        <p class="plan-desc">Ideal for larger estates and complex systems in South Tampa.</p>
+        <ul class="plan-features">
+          <li>Two professional inspections annually</li>
+          <li>Seasonal optimization & tuning</li>
+          <li>Full system diagnostics</li>
+          <li>Valve & controller maintenance</li>
+          <li>Leak detection included</li>
+          <li>Smart controller management</li>
+          <li>All repairs 30% off</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Start Plan</a>
+      </div>
+
+      <!-- ELITE PLAN -->
+      <div class="plan-card reveal">
+        <span class="plan-badge">Premium Service</span>
+        <h3 class="plan-name">Elite</h3>
+        <div class="plan-price">$360/year</div>
+        <p class="plan-desc">Luxury care for high-value estates and commercial properties.</p>
+        <ul class="plan-features">
+          <li>Four professional inspections annually</li>
+          <li>Advanced system optimization</li>
+          <li>Hydraulic analysis & modeling</li>
+          <li>Dedicated maintenance specialist</li>
+          <li>Water quality testing</li>
+          <li>Drainage assessment included</li>
+          <li>All repairs 35% off</li>
+          <li>Dedicated emergency hotline</li>
+        </ul>
+        <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Start Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPRING MAINTENANCE -->
+<section class="maintenance-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Seasonal Maintenance</span>
+      <h2>Spring Preparation (March-May)</h2>
+      <p class="section-intro">Spring is critical for Tampa irrigation. After winter dormancy, systems need inspection and adjustment for the growing season ahead.</p>
+    </div>
+
+    <div class="maintenance-grid">
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>🔧 What We Do</h3>
+          <ul>
+            <li>Complete system inspection for winter damage</li>
+            <li>Pressure testing all zones</li>
+            <li>Clean/replace filters</li>
+            <li>Check and adjust spray patterns</li>
+            <li>Valve lubrication and operation check</li>
+            <li>Winterization equipment removal</li>
+            <li>Program controller for spring watering</li>
+            <li>Leak detection sweep</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>📋 Why Spring Matters</h3>
+          <p>Winter freezes can crack PVC lines, freeze valves, and damage sprinkler heads. Spring inspection catches these problems before they waste water all season. We also adjust your system for spring growth, when Saint Augustine grass needs more water.</p>
+          <p><strong>Cost if skipped:</strong> $500-2,000 in wasted water and missed repairs.</p>
+          <p><strong>Spring inspection package:</strong> $299 (included in all maintenance plans).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMER MAINTENANCE -->
+<section class="maintenance-section" style="background: var(--white);">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Peak Season Care</span>
+      <h2>Summer Optimization (June-August)</h2>
+      <p class="section-intro">Tampa's peak heat and afternoon thunderstorms require active monitoring and adjustment. We prevent over-watering and storm damage.</p>
+    </div>
+
+    <div class="maintenance-grid">
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>☀️ Summer Challenges</h3>
+          <ul>
+            <li>Heat stress on Saint Augustine grass</li>
+            <li>Daily thunderstorms causing over-watering</li>
+            <li>High evaporation rates</li>
+            <li>Increased fungal disease risk</li>
+            <li>Pressure surges during storms</li>
+            <li>Algae growth in wet zones</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>🌊 Our Solutions</h3>
+          <p>We adjust watering schedules to account for daily rain, install/optimize rain sensors, and monitor weather patterns. This prevents the over-watering that leads to fungal disease and wasted water.</p>
+          <p>Summer maintenance includes bi-weekly adjustments, pressure testing after storms, and drainage checks to prevent flooding.</p>
+          <p><strong>Summer service package:</strong> $50/year add-on (or included in Premium/Elite plans).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FALL MAINTENANCE -->
+<section class="maintenance-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Transition Period</span>
+      <h2>Fall Adjustments (September-November)</h2>
+      <p class="section-intro">Fall is when water restrictions increase and temperatures cool. We transition your system from summer survival mode to fall efficiency.</p>
+    </div>
+
+    <div class="maintenance-grid">
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>🍂 Fall Maintenance</h3>
+          <ul>
+            <li>Water restriction compliance adjustment</li>
+            <li>Program adjustment for cooler weather</li>
+            <li>Post-drought system check</li>
+            <li>Aeration & thatch management</li>
+            <li>Fertilization schedule review</li>
+            <li>Winterization preparation begins</li>
+            <li>Controller programming update</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>🔄 Fall Transition Details</h3>
+          <p>As temperatures drop and water restrictions may tighten, we adjust your system for efficiency. Fall is also when grass enters dormancy preparation, requiring less water but better quality coverage.</p>
+          <p>We typically reduce watering frequency by 20-30% in fall while maintaining lawn health.</p>
+          <p><strong>Fall maintenance package:</strong> $299 (included in all plans).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WINTER MAINTENANCE -->
+<section class="maintenance-section" style="background: var(--white);">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Cold Protection</span>
+      <h2>Winter Protection (December-February)</h2>
+      <p class="section-intro">Even rare Tampa freezes can crack irrigation lines. Winter maintenance protects your system during dormancy and prevents freeze damage.</p>
+    </div>
+
+    <div class="maintenance-grid">
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>❄️ Winter Services</h3>
+          <ul>
+            <li>Pre-freeze system inspection</li>
+            <li>Backflow preventer protection</li>
+            <li>Line draining (if needed)</li>
+            <li>Valve winterization</li>
+            <li>Controller adjustments for dormancy</li>
+            <li>Minimal watering schedule</li>
+            <li>Post-freeze damage assessment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="maintenance-item">
+          <h3>❓ Tampa's Freeze Risk</h3>
+          <p>While Tampa rarely experiences freezing temperatures, when it happens (typically January-February), unprotected irrigation systems crack and fail. Water expands when frozen, creating cracks in PVC lines that leak all year.</p>
+          <p>Winter maintenance typically means minimal watering (dormant grass needs little water) and protection measures for exposed components.</p>
+          <p><strong>Winter inspection & protection:</strong> Included in all plans.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE NEIGHBORHOODS -->
+<section class="neighborhoods-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">South Tampa Service Areas</span>
+      <p class="section-intro">We specialize in maintaining irrigation systems for South Tampa's most prestigious residential communities.</p>
+    </div>
+
+    <div class="neighborhoods-grid">
+      <a href="irrigation-maintenance-hyde-park.html" class="neighborhood-card reveal" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <h4>🏘️ Hyde Park</h4>
+        <p>Established community with mature landscapes. We maintain systems for Victorian estates and modern homes alike.</p>
+      </a>
+      <a href="irrigation-maintenance-davis-island.html" class="neighborhood-card reveal" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <h4>🏖️ Davis Island</h4>
+        <p>Waterfront properties with premium irrigation systems. We provide specialized maintenance for high-end residential estates.</p>
+      </a>
+      <div class="neighborhood-card reveal">
+        <h4>🌴 Palma Ceia</h4>
+        <p>Luxury properties with complex irrigation. Our maintenance plans protect significant landscape investments.</p>
+      </div>
+      <div class="neighborhood-card reveal">
+        <h4>💎 Culbreath Isles</h4>
+        <p>High-end island community requiring expert water management and system optimization.</p>
+      </div>
+      <div class="neighborhood-card reveal">
+        <h4>🏠 Harbour Island</h4>
+        <p>Premium waterfront living demands precision irrigation maintenance and elite service.</p>
+      </div>
+      <div class="neighborhood-card reveal">
+        <h4>🌳 South Hyde Park</h4>
+        <p>Established neighborhood with diverse irrigation systems. We customize maintenance for each property's unique needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Common Questions</span>
+      <h2>Irrigation Maintenance FAQ</h2>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <h4>How often should irrigation systems be serviced?</h4>
+        <p>Professionally designed systems should receive at least quarterly (4x/year) inspection and seasonal adjustments. Our Essential plan includes this. Premium plans provide bi-monthly or monthly service for more complex systems.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>What's included in a typical maintenance visit?</h4>
+        <p>We inspect all components (valves, heads, lines, controllers), test water pressure, check for leaks, clean filters, verify coverage patterns, and make seasonal adjustments. Visit length: 45-90 minutes depending on system complexity.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>Can maintenance prevent major repairs?</h4>
+        <p>Yes. About 80% of irrigation failures are preventable through maintenance. Early detection of small problems (loose connections, worn seals, clogged filters) prevents expensive failures later. Maintenance ROI is typically 3-5x the maintenance cost in prevented repairs.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>What makes your maintenance different?</h4>
+        <p>We don't just inspect—we optimize. Each visit includes water efficiency analysis, coverage pattern verification, and customized adjustments for Tampa's specific climate. Your system gets better with each maintenance visit, not just checked off.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>Do maintenance plans cover emergency repairs?</h4>
+        <p>Emergency repairs (beyond routine maintenance) are not included in plans, but all plan members receive 24/7 priority emergency service and discounts on repairs (20-35% depending on plan).</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>How do I schedule maintenance?</h4>
+        <p>Simple: book your plan online or call (813) 499-8485. We'll schedule your routine visits, send reminders, and provide online access to service records and recommendations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Protect Your Irrigation Investment</h2>
+    <p class="cta-subtitle">South Tampa's most trusted irrigation maintenance specialists. Start your maintenance plan today and enjoy peace of mind year-round.</p>
+    <div class="cta-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Consultation</a>
+      <a href="tel:8134998485" class="btn-secondary">📞 (813) 499-8485</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span>Water Oak Irrigation</span>
+      </a>
+      <p>Professional irrigation maintenance and system optimization for South Tampa's most prestigious properties.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="sprinkler-repair.html">Sprinkler Repair</a>
+      <a href="drainage-solutions.html">Drainage Solutions</a>
+      <a href="smart-controllers.html">Smart Controllers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <a href="irrigation-maintenance-hyde-park.html">Hyde Park</a>
+      <a href="irrigation-maintenance-davis-island.html">Davis Island</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:8134998485">☎ (813) 499-8485</a>
+      <a href="mailto:dan@wateroakirrigation.com">📧 Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Water Oak Irrigation. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        document.getElementById('
