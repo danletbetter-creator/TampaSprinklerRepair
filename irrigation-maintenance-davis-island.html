@@ -12,24 +12,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Irrigation Preventative Maintenance - Davis Island",
-    "description": "Premium irrigation system maintenance for Davis Island waterfront estates. Specialized waterfront expertise, monthly service options, 24/7 emergency support.",
-    "url": "https://wateroakirrigation.com/irrigation-maintenance-davis-island.html",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Water Oak Irrigation",
-      "telephone": "(813) 499-8485",
-      "email": "Dan@wateroakirrigation.com",
-      "areaServed": "Davis Island, Tampa, FL"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "180"
-    }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://wateroakirrigation.com/#business",
+        "name": "Water Oak Irrigation",
+        "telephone": "(813) 499-8485",
+        "email": "Dan@wateroakirrigation.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tampa",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "180"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Irrigation Preventative Maintenance - Davis Island",
+        "description": "Premium irrigation system maintenance for Davis Island waterfront estates. Specialized waterfront expertise, monthly service options, 24/7 emergency support.",
+        "url": "https://wateroakirrigation.com/irrigation-maintenance-davis-island",
+        "areaServed": "Davis Island, Tampa, FL",
+        "provider": {
+          "@id": "https://wateroakirrigation.com/#business"
+        }
+      }
+    ]
   }
   </script>
 

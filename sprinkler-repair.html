@@ -13,62 +13,70 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Sprinkler Repair & Maintenance",
-    "description": "Professional sprinkler repair and maintenance services for Tampa Bay including broken heads, underground leaks, zone valve failures, controller issues, and well pump service.",
-    "url": "https://wateroakirrigation.com/sprinkler-repair.html",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Water Oak Irrigation",
-      "telephone": "(813) 499-8485",
-      "email": "Dan@wateroakirrigation.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tampa",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      }
-    },
-    "areaServed": ["Tampa", "Wesley Chapel", "Brandon", "St. Petersburg", "Carrollwood", "Lake Magdalene", "Odessa"],
-    "serviceType": "Irrigation Repair",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "150"
-    },
-    "priceRange": "$75-$500",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Sprinkler Repair Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Broken Sprinkler Head Replacement",
-          "price": "75-150",
-          "priceCurrency": "USD"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://wateroakirrigation.com/#business",
+        "name": "Water Oak Irrigation",
+        "telephone": "(813) 499-8485",
+        "email": "Dan@wateroakirrigation.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tampa",
+          "addressRegion": "FL",
+          "addressCountry": "US"
         },
-        {
-          "@type": "Offer",
-          "name": "Underground Leak Detection and Repair",
-          "price": "200-600",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Zone Valve Replacement",
-          "price": "150-350",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Controller Repair or Replacement",
-          "price": "150-500",
-          "priceCurrency": "USD"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "150"
         }
-      ]
-    }
+      },
+      {
+        "@type": "Service",
+        "name": "Sprinkler Repair & Maintenance",
+        "description": "Professional sprinkler repair and maintenance services for Tampa Bay including broken heads, underground leaks, zone valve failures, controller issues, and well pump service.",
+        "url": "https://wateroakirrigation.com/sprinkler-repair",
+        "areaServed": ["Tampa", "Wesley Chapel", "Brandon", "St. Petersburg", "Carrollwood", "Lake Magdalene", "Odessa"],
+        "serviceType": "Irrigation Repair",
+        "priceRange": "$75-$500",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Sprinkler Repair Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Broken Sprinkler Head Replacement",
+              "price": "75-150",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Underground Leak Detection and Repair",
+              "price": "200-600",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Zone Valve Replacement",
+              "price": "150-350",
+              "priceCurrency": "USD"
+            },
+            {
+              "@type": "Offer",
+              "name": "Controller Repair or Replacement",
+              "price": "150-500",
+              "priceCurrency": "USD"
+            }
+          ]
+        },
+        "provider": {
+          "@id": "https://wateroakirrigation.com/#business"
+        }
+      }
+    ]
   }
   </script>
 
