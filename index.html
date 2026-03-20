@@ -749,11 +749,14 @@
           <p>Quick response — we'll be in touch shortly.</p>
         </div>
       </div>
-      <form class="contact-form" onsubmit="submitHeroForm(event)">
-        <input type="text" placeholder="Your Name" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <input type="email" placeholder="Email Address" />
-        <textarea placeholder="Describe your irrigation or drainage issue..."></textarea>
+      <form name="hero-quote-request" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitHeroForm(event)">
+        <input type="hidden" name="form-name" value="hero-quote-request" />
+        <input type="hidden" name="subject" value="New Quote Request from %{formName}" />
+        <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" />
+        <textarea name="message" placeholder="Describe your irrigation or drainage issue..."></textarea>
         <button type="submit" class="btn-primary">Send Request →</button>
       </form>
     </div>
@@ -1161,14 +1164,17 @@
       <div class="contact-form-wrap reveal">
         <h3>Send Us a Message</h3>
         <p>We'll respond within one business day — usually much sooner.</p>
-        <form class="form-light" onsubmit="submitContactForm(event)">
+        <form name="contact-message" class="form-light" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitContactForm(event)">
+          <input type="hidden" name="form-name" value="contact-message" />
+          <input type="hidden" name="subject" value="New Message from %{formName}" />
+          <p style="display:none"><label>Don't fill this: <input name="bot-field" /></label></p>
           <div class="form-row">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
+            <input type="text" name="first-name" placeholder="First Name" required />
+            <input type="text" name="last-name" placeholder="Last Name" required />
           </div>
-          <input type="email" placeholder="Email Address" required />
-          <input type="tel" placeholder="Phone Number" />
-          <textarea placeholder="Tell us about your irrigation or drainage needs..."></textarea>
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+          <textarea name="message" placeholder="Tell us about your irrigation or drainage needs..."></textarea>
           <button type="submit" class="btn-primary">Send Message →</button>
         </form>
       </div>
@@ -1245,13 +1251,59 @@
   });
   function submitHeroForm(e) {
     e.preventDefault();
-    alert("Thanks! We'll be in touch very shortly.\nFor immediate help, call (813) 499-8485.");
-    e.target.reset();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function(response) {
+      if (response.ok) {
+        alert("Thanks! We'll be in touch very shortly.\nFor immediate help, call (813) 499-8485.");
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again or call us at (813) 499-8485.");
+      }
+    })
+    .catch(function() {
+      alert("Something went wrong. Please try again or call us at (813) 499-8485.");
+    })
+    .finally(function() {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Request →';
+    });
   }
   function submitContactForm(e) {
     e.preventDefault();
-    alert("Message sent! We'll respond within one business day.\nFor urgent needs, call (813) 499-8485.");
-    e.target.reset();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function(response) {
+      if (response.ok) {
+        alert("Message sent! We'll respond within one business day.\nFor urgent needs, call (813) 499-8485.");
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again or call us at (813) 499-8485.");
+      }
+    })
+    .catch(function() {
+      alert("Something went wrong. Please try again or call us at (813) 499-8485.");
+    })
+    .finally(function() {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message →';
+    });
   }
 
 </script>
