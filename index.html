@@ -643,7 +643,7 @@
     .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 52px; }
     .blog-card {
       border-radius: 14px; overflow: hidden; border: 1px solid var(--gray-light);
-      cursor: pointer; transition: all 0.3s; display: flex; flex-direction: column;
+      text-decoration: none; transition: all 0.3s; display: flex; flex-direction: column;
       background: var(--white);
     }
     .blog-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(26,46,107,0.12); border-color: var(--blue-light); }
@@ -657,55 +657,7 @@
     .blog-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
     .read-more { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: var(--blue-bright); margin-top: 14px; letter-spacing: 0.04em; }
 
-    /* ── BLOG MODAL ── */
-    .blog-overlay {
-      display: none; position: fixed; inset: 0; z-index: 200;
-      background: rgba(10,18,50,0.85); backdrop-filter: blur(6px);
-      overflow-y: auto; padding: 40px 20px;
-    }
-    .blog-overlay.active { display: block; }
-    .blog-modal {
-      background: var(--white); border-radius: 18px; max-width: 760px;
-      margin: 0 auto; padding: 52px 56px; position: relative;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
-      animation: modalIn 0.3s ease;
-    }
-    @keyframes modalIn { from { opacity:0; transform: translateY(24px); } to { opacity:1; transform: translateY(0); } }
-    .blog-close {
-      position: absolute; top: 20px; right: 24px;
-      background: var(--gray-light); border: none; border-radius: 6px;
-      padding: 8px 16px; font-size: 13px; font-weight: 700; cursor: pointer;
-      color: var(--dark); font-family: "DM Sans", sans-serif; transition: background 0.2s;
-    }
-    .blog-close:hover { background: var(--blue-light); color: white; }
-    .post-tag {
-      display: inline-block; background: rgba(47,85,200,0.1); color: var(--blue-bright);
-      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 5px 12px; border-radius: 100px; margin-bottom: 16px;
-    }
-    .post-title {
-      font-family: "Playfair Display", serif; font-size: clamp(24px, 3vw, 36px);
-      font-weight: 900; line-height: 1.15; color: var(--dark); margin-bottom: 10px;
-    }
-    .post-meta { font-size: 13px; color: var(--gray); margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--gray-light); }
-    #blog-modal-content p { font-size: 15px; line-height: 1.8; color: #334; margin-bottom: 18px; }
-    #blog-modal-content h3 { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 700; color: var(--dark); margin: 32px 0 12px; }
-    #blog-modal-content ul { padding-left: 24px; margin-bottom: 18px; }
-    #blog-modal-content li { font-size: 15px; line-height: 1.8; color: #334; margin-bottom: 6px; }
-    .post-tip {
-      background: rgba(47,85,200,0.06); border-left: 4px solid var(--blue-bright);
-      border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 24px 0;
-      font-size: 14px; line-height: 1.7; color: var(--dark);
-    }
-    .post-cta {
-      background: var(--green-bright); border-radius: 12px; padding: 28px 32px; margin-top: 36px;
-      color: white;
-    }
-    .post-cta strong { display: block; font-family: "Playfair Display", serif; font-size: 20px; margin-bottom: 6px; color: #ffffff; font-weight: 700; }
-    .post-cta p { font-size: 14px; color: rgba(255,255,255,0.95); margin-bottom: 18px; font-weight: 500; }
-    .post-cta .btn-primary { display: inline-flex; }
     @media (max-width: 600px) {
-      .blog-modal { padding: 36px 22px; }
       .blog-grid { grid-template-columns: 1fr; }
     }
 
@@ -932,7 +884,7 @@
     <div class="blog-grid">
 
       <!-- POST 1 -->
-      <div class="blog-card reveal" onclick="openPost('post1')">
+      <a href="sod-installation-tampa.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-1">🌿</div>
         <div class="blog-body">
           <p class="blog-date">Feb 27, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -940,10 +892,10 @@
           <p>Everything you need to know about getting a lush, healthy lawn with professional sod installation in Tampa Bay — including the best grass types for Florida's climate.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 2 -->
-      <div class="blog-card reveal" onclick="openPost('post2')">
+      <a href="watering-restrictions-2026.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-2">📅</div>
         <div class="blog-body">
           <p class="blog-date">Feb 23, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -951,10 +903,10 @@
           <p>Tampa Bay is under Modified Phase II water restrictions — one day per week watering until July 2026. Here's the pro trick to keep your lawn alive using Program A &amp; B.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 3 -->
-      <div class="blog-card reveal" onclick="openPost('post3')">
+      <a href="post-freeze-irrigation-wesley-chapel.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-3">❄️</div>
         <div class="blog-body">
           <p class="blog-date">Feb 12, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -962,10 +914,10 @@
           <p>A step-by-step guide for safely restoring your irrigation system after a freeze — including how to handle backflow preventers and water hammer.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 4 -->
-      <div class="blog-card reveal" onclick="openPost('post4')">
+      <a href="sprinkler-repair-guide.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-1">🔧</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -973,10 +925,10 @@
           <p>From broken heads to underground leaks and zone valve failures—learn what causes sprinkler problems and how professional repair saves you thousands in water waste.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 5 -->
-      <div class="blog-card reveal" onclick="openPost('post5')">
+      <a href="drainage-solutions-guide.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-2">💧</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -984,10 +936,10 @@
           <p>Tired of standing water and flooded lawns? Discover how French drains, catch basins, and custom drainage systems protect your property and landscape from Florida's tropical rains.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 6 -->
-      <div class="blog-card reveal" onclick="openPost('post6')">
+      <a href="saint-augustine-grass-fungus.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-3">🍃</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -995,10 +947,10 @@
           <p>Brown patch, dollar spot, and leaf spot fungus destroy Saint Augustine lawns in Tampa's humid climate. Learn how to identify, prevent, and treat turf diseases before they kill your lawn.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 7 -->
-      <div class="blog-card reveal" onclick="openPost('post7')">
+      <a href="smart-irrigation-controllers-guide.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-1">📡</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -1006,10 +958,10 @@
           <p>WiFi-enabled controllers adjust watering based on weather, soil moisture, and seasonal needs. Learn how smart irrigation saves Tampa homeowners $200-400 annually while keeping lawns healthier.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 8 -->
-      <div class="blog-card reveal" onclick="openPost('post8')">
+      <a href="irrigation-design-guide.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-2">🛠️</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -1017,10 +969,10 @@
           <p>From residential lawns to commercial properties, professional irrigation design ensures full coverage, efficiency, and compliance. See how proper design prevents costly problems and maximizes landscape health.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
       <!-- POST 9 -->
-      <div class="blog-card reveal" onclick="openPost('post9')">
+      <a href="well-pump-service-guide.html" class="blog-card reveal" style="text-decoration:none;color:inherit;">
         <div class="blog-thumb blog-thumb-3">⚙️</div>
         <div class="blog-body">
           <p class="blog-date">Mar 15, 2026 &nbsp;·&nbsp; Dan Letbetter</p>
@@ -1028,992 +980,14 @@
           <p>For properties with private wells or lake irrigation, well pump problems mean system failure. Learn when to repair, when to replace, and how to maintain pumps for years of reliable service.</p>
           <span class="read-more">Read Full Article →</span>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- BLOG MODAL OVERLAY -->
-<div id="blog-overlay" class="blog-overlay" onclick="closePost(event)">
-  <div class="blog-modal">
-    <button class="blog-close" onclick="closePost(null, true)">✕ Close</button>
-    <div id="blog-modal-content"></div>
-  </div>
-</div>
 
-<!-- HIDDEN ARTICLE CONTENT -->
-<div id="post1" class="post-content" style="display:none">
-  <span class="post-tag">Lawn Care</span>
-  <h2 class="post-title">Expert Sod Installation for Tampa Homeowners</h2>
-  <p class="post-meta">February 27, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>If you're a homeowner in Tampa, Florida, you know that achieving a thick, green lawn isn't always easy. Between intense heat, heavy rains, sandy soils, and seasonal drought conditions, growing grass from seed can be frustrating and time-consuming. That's why professional sod installation has become one of the fastest and most effective ways to transform outdoor spaces across Tampa Bay.</p>
-  <p>At Water Oak Irrigation, we specialize in high-quality sod installation designed specifically for Tampa's unique climate and soil conditions. Here's what you need to know before installing new sod — and why hiring professionals makes all the difference.</p>
-
-  <h3>Why Sod Installation Is Ideal for Tampa Lawns</h3>
-  <p>Living in Tampa means dealing with intense summer heat, sudden heavy rainstorms, sandy fast-draining soil, and water restrictions at certain times of year. Unlike seeding, sod gives you:</p>
-  <ul>
-    <li><strong>Instant results</strong> — A beautiful lawn immediately</li>
-    <li><strong>Erosion control</strong> — Especially important during Florida's rainy season</li>
-    <li><strong>Fewer weeds</strong> — Dense sod leaves little room for weed growth</li>
-    <li><strong>Faster usability</strong> — Less waiting time before enjoying your yard</li>
-  </ul>
-  <p>With proper installation and irrigation, sod establishes quickly and thrives in our subtropical climate.</p>
-
-  <h3>Choosing the Right Sod for Tampa, Florida</h3>
-  <p>Not all grass varieties perform well in Tampa's environment. The most popular and successful sod types in the area include:</p>
-  <ul>
-    <li><strong>St. Augustine Grass</strong> — The most common choice for Florida homes. Handles heat and humidity well and provides a thick, carpet-like appearance.</li>
-    <li><strong>Zoysia Grass</strong> — Excellent durability and finer texture. Great for high-traffic lawns and strong weed resistance.</li>
-    <li><strong>Bahia Grass</strong> — Drought-tolerant and lower maintenance — a practical option for larger properties or homeowners seeking minimal upkeep.</li>
-  </ul>
-  <p>Choosing the right grass depends on sun exposure, irrigation system design, soil quality, and how you use your yard. A professional evaluation ensures you get the best long-term results.</p>
-
-  <h3>The Importance of Proper Soil Preparation</h3>
-  <p>One of the biggest mistakes homeowners make is skipping proper soil preparation. Simply laying sod over existing grass or compacted soil can lead to poor rooting and uneven growth. Professional sod installation should include:</p>
-  <ul>
-    <li>Removal of old turf and debris</li>
-    <li>Soil grading for proper drainage</li>
-    <li>Soil amendment when necessary</li>
-    <li>Starter fertilizer application</li>
-    <li>Tight, seamless sod placement</li>
-  </ul>
-  <p>In a region like Tampa, where heavy rains can quickly wash away loose soil, grading and compaction are critical steps.</p>
-
-  <h3>Irrigation: The Key to Successful Sod Establishment</h3>
-  <p>New sod requires consistent watering during the first few weeks to develop strong root systems. Without proper irrigation, even the best sod can fail. At Water Oak Irrigation, we ensure your sprinkler system is optimized for full coverage with no dry spots, proper watering schedules, compliance with local water restrictions, and efficient water use to prevent overwatering.</p>
-  <p>A properly designed irrigation system protects your investment and helps your new lawn establish quickly and evenly.</p>
-
-  <h3>When Is the Best Time to Install Sod in Tampa?</h3>
-  <p>One of the advantages of living in Florida is that sod can be installed almost year-round. Spring and early summer promote faster root growth, fall installations benefit from milder temperatures, and even winter installations are possible with proper irrigation. Because Tampa rarely experiences freezing temperatures, homeowners have flexibility in scheduling their lawn upgrades.</p>
-
-  <h3>Why Hire a Professional Sod Installation Company?</h3>
-  <p>While DIY sod installation may seem straightforward, small mistakes can lead to costly problems such as poor drainage, uneven surfaces, gaps between sod pieces, improper watering, and grass die-off. Professional installation ensures your lawn not only looks beautiful on day one — but thrives for years to come.</p>
-
-  <div class="post-cta">
-    <strong>Ready to Transform Your Tampa Lawn?</strong>
-    <p>Our team at Water Oak Irrigation combines expert soil preparation, high-quality sod, and precision irrigation to deliver long-lasting results.</p>
-    <a href="tel:8134998485" class="btn-primary">📞 Call (813) 499-8485</a>
-  </div>
-</div>
-
-<div id="post2" class="post-content" style="display:none">
-  <span class="post-tag">Water Restrictions</span>
-  <h2 class="post-title">The 2026 Watering Restrictions Are Here: What You Need to Know</h2>
-  <p class="post-meta">February 23, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>If you live in the Tampa Bay area — including Hillsborough and Pasco counties — you've likely heard the news. Due to a severe rainfall deficit, we are officially under a <strong>Modified Phase II Water Shortage</strong> from now until July 1, 2026. That means we are strictly down to <strong>one-day-per-week watering.</strong></p>
-  <p>The good news? The new rules explicitly state that your HOA cannot fine you or force you to replace your grass if it turns brown due to these restrictions. The bad news? Fines for breaking the county watering rules can be steep. So, how do you keep your landscape alive when you can only run your system once a week?</p>
-
-  <h3>The Biggest Mistake Homeowners Make</h3>
-  <p>When restricted to one day, the immediate panic response is to crank up the irrigation timer. If a zone normally runs for 20 minutes, people bump it up to 45 minutes or an hour, hoping to flood the lawn with enough water to last the week.</p>
-  <p><strong>Please don't do this!</strong> Florida soil can only absorb so much water at once. Pumping an hour of water onto your grass at one time creates surface tension. The ground stops drinking, and all that expensive water just sheets off your lawn and down into the street drain.</p>
-
-  <h3>The Solution: Use Program A and Program B</h3>
-  <p>To actually get water down to the deep roots where it matters, you need to split up your watering times on your designated day. You can do this easily using the <strong>"Program A" and "Program B"</strong> features on almost every standard irrigation timer.</p>
-  <p>Here is the pro tip: Instead of watering for 45 minutes straight, water for 20 minutes, let it soak in, and then water again later.</p>
-  <ul>
-    <li><strong>Step 1:</strong> Leave your normal schedule on Program A. For example, set it to run your zones starting at 4:00 AM.</li>
-    <li><strong>Step 2:</strong> Go to Program B and set a second start time for later in the evening on your permitted day (for example, 9:00 PM — just ensure you don't cross over midnight into a restricted day).</li>
-    <li><strong>Step 3:</strong> Adjust the run times. By breaking the watering into two cycles, the ground actually has time to absorb the first round, meaning the second round will penetrate deeper into the root zone instead of washing into the gutter.</li>
-  </ul>
-
-  <div class="post-tip">
-    💡 <strong>Pro Tip:</strong> If you aren't sure how to set up dual programs on your specific timer, or if you want to make sure your system is running at peak efficiency before the dry season peaks, give Water Oak Irrigation a call. We can optimize your system to make every drop count.
-  </div>
-
-  <div class="post-cta">
-    <strong>Need Help Optimizing Your System?</strong>
-    <p>We'll set up your timer for maximum efficiency under the current water restrictions.</p>
-    <a href="tel:8134998485" class="btn-primary">📞 Call (813) 499-8485</a>
-  </div>
-</div>
-
-<div id="post3" class="post-content" style="display:none">
-  <span class="post-tag">Freeze Recovery</span>
-  <h2 class="post-title">What to Do Post-Freeze in Wesley Chapel, Florida</h2>
-  <p class="post-meta">February 12, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>In Florida, we don't expect to talk about freezing temperatures often, but when they hit, your irrigation system is the first thing at risk. Even a short freeze in Tampa Bay can cause water to expand, cracking PVC pipes or damaging your expensive backflow preventer.</p>
-  <p><strong>Before you turn your water back on,</strong> follow these three essential steps to ensure you don't have a flood on your hands.</p>
-
-  <h3>Step 1: Close Your Test Ports</h3>
-  <p>If you opened your test ports (the small valves on the side of your backflow) to drain the system before the freeze, you need to close them first. Use a flathead screwdriver to turn the slots so they are <strong>perpendicular to the port.</strong></p>
-
-  <h3>Step 2: Set the Backflow Seal</h3>
-  <p>Backflow preventers require a specific sequence to seal correctly. Open your first shut-off valve <strong>slowly</strong> to let the device pressurize. You might hear a "pop" or a hiss of air — this is the internal check valve seating itself. Once the device is pressurized and not leaking, you can fully open both valves.</p>
-
-  <h3>Step 3: Watch for "Water Hammer"</h3>
-  <p>As the water fills the main lines, you might hear the pipes shaking or see the valves "popping." We call this <strong>water hammer.</strong> It happens as air is pushed out and pressure equalizes in the manifold. This is normal! Once the pressure stabilizes, the valves will shut completely, and you'll be ready to run a test cycle.</p>
-
-  <div class="post-tip">
-    ⚠️ <strong>Warning:</strong> If you see water spraying from your backflow or notice unusually wet spots in your yard after a freeze, you may have a cracked pipe. Don't ignore it — call us immediately.
-  </div>
-
-  <h3>Need a Professional Inspection?</h3>
-  <p>Water Oak Irrigation proudly serves our full local community, including Tampa, New Tampa, Tampa Palms, Zephyrhills, Wesley Chapel, Odessa, Lake Magdalene, and Carrollwood.</p>
-
-  <div class="post-cta">
-    <strong>Concerned About Freeze Damage?</strong>
-    <p>Call us to schedule a repair or post-freeze inspection today.</p>
-    <a href="tel:8134998485" class="btn-primary">📞 Call (813) 499-8485</a>
-  </div>
-</div>
-
-<!-- POST 4: SPRINKLER REPAIR -->
-<div id="post4" class="post-content" style="display:none">
-  <span class="post-tag">Sprinkler Repair</span>
-  <h2 class="post-title">Sprinkler Repair in Tampa Bay: Complete Guide to Fixing Broken Irrigation Systems</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>A broken sprinkler system is more than just an inconvenience—it's a threat to your landscape investment and a drain on your water bill. If you're searching for "sprinkler repair near me" or "irrigation system repair in Tampa," you've come to the right place. At Water Oak Irrigation, we've spent years fixing every type of sprinkler failure imaginable, and we're here to help you understand what's wrong with your system and how we fix it.</p>
-
-  <p>This comprehensive guide covers everything Tampa Bay homeowners and commercial property managers need to know about sprinkler repair, from identifying problems early to understanding the difference between DIY fixes and professional irrigation services.</p>
-
-  <h3>Why Sprinkler Systems Fail: Common Problems in Tampa Bay</h3>
-  <p>Tampa's hot, humid climate and sandy soil create unique challenges for irrigation systems. Understanding the most common failure points can help you catch problems before they become expensive repairs.</p>
-
-  <h4>1. Broken or Leaking Sprinkler Heads</h4>
-  <p>Sprinkler heads take a beating in Florida. Foot traffic, lawn equipment, weather damage, and soil shifting all cause heads to crack, misalign, or develop leaks. A single leaking head can waste hundreds of gallons of water per month and leave your lawn with brown patches while other areas flood.</p>
-
-  <p><strong>Signs of broken sprinkler heads:</strong></p>
-  <ul>
-    <li>Water spraying in wrong directions or patterns</li>
-    <li>Cracked or tilted heads poking out of the ground</li>
-    <li>No water coming from specific zones</li>
-    <li>Geysers or water shooting straight up</li>
-    <li>Wet spots in the yard even when irrigation isn't running</li>
-  </ul>
-
-  <p>The good news? Broken sprinkler head replacement is one of the fastest and most affordable repairs we perform. Most broken heads can be swapped out in minutes, and we stock all major brands (Hunter, Rain Bird, Toro, Rainmatic) for immediate installation.</p>
-
-  <h4>2. Underground Leaks in Irrigation Lines</h4>
-  <p>This is the repair Tampa homeowners dread—and the one that makes the biggest difference to their water bills. Underground leaks are invisible until you notice either soggy patches, unusually high water bills, sudden low water pressure, or unexplained greening in dead zones.</p>
-
-  <p>PVC and polyethylene irrigation lines buried in Tampa's sandy, shifting soil can develop cracks from root intrusion, soil movement, UV damage, age and corrosion, or freeze damage.</p>
-
-  <p>We use advanced leak detection equipment to pinpoint underground breaks without digging up your entire yard. Once located, we can often isolate the damaged section and repair just that portion, or recommend full line replacement if the system is aging.</p>
-
-  <h4>3. Zone Valve Failures</h4>
-  <p>Zone valves control water flow to different sections of your landscape. When they fail, you might see water continuously running from one zone, no water to an entire section despite controller settings, or air sputtering from sprinkler heads.</p>
-
-  <p>Valve failures are common in Tampa because of our mineral-rich water and moisture exposure. Solenoid valves are particularly vulnerable. We stock replacement valves and can often get your system back to full operation same-day.</p>
-
-  <h4>4. Controller and Timer Problems</h4>
-  <p>Your irrigation controller is the brain of your system. Modern WiFi controllers offer amazing convenience, but they can malfunction due to power surges during Florida thunderstorms, faulty programming, sensor failures, or connectivity issues.</p>
-
-  <p>Before assuming your controller is broken, we can often reprogram settings or replace just the failed component. For property owners upgrading to smart irrigation, we specialize in installing weather-based controllers that reduce water usage by 15-30% while keeping lawns healthier.</p>
-
-  <h4>5. Wiring Issues and Electrical Faults</h4>
-  <p>Buried irrigation wiring deteriorates over time, especially in Tampa's moist soil. Corroded wires or broken connections prevent zones from activating. Our technicians use continuity testing to identify and repair electrical problems quickly.</p>
-
-  <h3>Signs Your Sprinkler System Needs Repair RIGHT NOW</h3>
-  <p>Don't wait for your water bill to shock you. These are urgent warning signs:</p>
-
-  <div class="post-tip">
-    <strong>🚨 Immediate Action Required:</strong><br>
-    <strong>Uncontrolled water flow</strong> — Water running from a zone even when it's off signals a valve failure. This can waste hundreds of gallons daily.<br><br>
-    <strong>Visible wet spots or "lakes"</strong> — Underground leaks are getting worse every day and will cause foundation or landscape damage.<br><br>
-    <strong>Water bill spike without explanation</strong> — A 20-30% sudden increase usually means a significant leak.<br><br>
-    <strong>No pressure in one or more zones</strong> — Broken lines, clogs, or valve failures need immediate diagnosis.<br><br>
-    <strong>Geysers or malfunctioning heads</strong> — Broken sprinkler heads waste water and leave dead patches in your lawn.
-  </div>
-
-  <h3>Our Sprinkler Repair Services in Tampa Bay</h3>
-  <p>At Water Oak Irrigation, we handle every type of sprinkler repair across the Tampa Bay region:</p>
-
-  <ul>
-    <li><strong>Broken Sprinkler Head Replacement</strong> — Professional-grade equipment that matches your system</li>
-    <li><strong>Underground Leak Detection and Repair</strong> — State-of-the-art detection without unnecessary digging</li>
-    <li><strong>Zone Valve and Solenoid Repair</strong> — Same-day replacement of failed valves</li>
-    <li><strong>Controller Reprogramming and Smart Controller Upgrades</strong> — WiFi-enabled systems you control from your phone</li>
-    <li><strong>Irrigation System Maintenance Plans</strong> — Preventive maintenance to catch issues early</li>
-    <li><strong>Well Pump Service and Pressure Tank Repairs</strong> — For properties with private wells or lake irrigation</li>
-  </ul>
-
-  <h3>Sprinkler Repair in Your Tampa Bay Service Area</h3>
-  <p>Water Oak Irrigation provides professional sprinkler repair across all of Tampa Bay, including South Tampa, Central Tampa, New Tampa, East Tampa, and Pinellas County. No matter which Tampa neighborhood you're in, we service your area. Most emergency repairs are handled same-day if you call before 4 PM.</p>
-
-  <h3>DIY Sprinkler Repair vs. Hiring a Professional</h3>
-  <p><strong>What You CAN Safely DIY:</strong> Reprogramming your controller, cleaning debris from sprinkler heads, adjusting head direction, or replacing a rain sensor battery.</p>
-
-  <p><strong>What You Should CALL A PROFESSIONAL FOR:</strong> Broken sprinkler heads, underground leaks, valve replacement, electrical work, and line repair or replacement.</p>
-
-  <p><strong>Why professional repair makes sense:</strong> A $200-400 professional repair done right lasts years. A DIY attempt that goes wrong can cost $1,500+ to fix properly. Plus, we guarantee our work—if the same issue returns, we fix it for free.</p>
-
-  <h3>How Much Do Sprinkler Repairs Cost in Tampa?</h3>
-  <p>Repair costs vary based on the problem, but here's what Tampa homeowners typically pay:</p>
-
-  <ul>
-    <li><strong>Broken sprinkler head replacement:</strong> $75-150 per head</li>
-    <li><strong>Underground leak repair:</strong> $200-600</li>
-    <li><strong>Zone valve replacement:</strong> $150-350</li>
-    <li><strong>Controller repair or replacement:</strong> $150-500</li>
-    <li><strong>Emergency same-day service:</strong> Add $50 service fee after 4 PM</li>
-  </ul>
-
-  <p>Most repairs cost less than what you'll waste in water bills from a broken system in just a few weeks. Plus, we offer free estimates on all repairs—no obligation.</p>
-
-  <div class="post-cta">
-    <strong>Is Your Sprinkler System Broken?</strong>
-    <p>Don't wait for your water bill to spike or your landscape to suffer. Our expert technicians can diagnose and repair any irrigation problem—same day if you call early.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Sprinkler Repair Now</a>
-  </div>
-
-  <p><strong>Or call us directly:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We'll answer your questions and get you booked for same-day or next-day service.</p>
-
-  <p style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.1);"><strong>💡 Pro Tip:</strong> The best sprinkler repair is one you never need. <a href="irrigation-maintenance.html" style="color: var(--blue-bright); font-weight: 600;">Join our preventative maintenance plans</a> to catch problems early, prevent 80% of failures, and save money on repairs.</p>
-</div>
-
-<!-- POST 5: DRAINAGE SOLUTIONS -->
-<div id="post5" class="post-content" style="display:none">
-  <span class="post-tag">Drainage Solutions</span>
-  <h2 class="post-title">Drainage Solutions for Tampa Bay: Stop Yard Flooding Permanently</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>If you're dealing with standing water in your yard, soggy landscaping, or puddles that won't drain, you're not alone in Tampa Bay. Our subtropical climate brings intense summer thunderstorms, and Florida's sandy, porous soil often can't handle the volume of water. The result? Flooded yards, eroded landscapes, and potential foundation damage.</p>
-
-  <p>The good news? Professional drainage solutions can transform your waterlogged property into dry, usable outdoor space. This comprehensive guide explains everything you need to know about yard drainage, from understanding why water pools in your landscape to choosing the right drainage system for your Tampa Bay home or commercial property.</p>
-
-  <h3>Why Tampa Bay Properties Have Drainage Problems</h3>
-  <p>Tampa's flooding issues aren't random. Our location and climate create the perfect storm for water management challenges:</p>
-
-  <h4>Florida's Sandy, Porous Soil</h4>
-  <p>Unlike northern soil that compacts and retains water, Florida's sandy soil drains too quickly in some areas and doesn't drain at all in others—depending on clay layers and soil composition. This inconsistency is why some yards stay swampy while neighboring properties drain fine.</p>
-
-  <h4>Intense Summer Thunderstorms</h4>
-  <p>Tampa's thunderstorm season (June-September) dumps 2-3 inches of rain in as little as 30 minutes. Your existing drainage system was designed for "normal" rainfall, not tropical downpours. When heavy rain exceeds drainage capacity, water pools and floods.</p>
-
-  <h4>High Water Table</h4>
-  <p>Much of Tampa Bay sits close to the water table—especially properties near Hillsborough Bay, downtown Tampa, and low-lying areas. During heavy rain, groundwater rises, preventing surface water from draining into the soil.</p>
-
-  <h4>Poor Grading and Landscaping Mistakes</h4>
-  <p>Many Tampa properties were graded incorrectly when first developed. If your yard slopes toward your house instead of away from it, water naturally collects near your foundation. Even small landscaping changes—adding a deck, patio, or raised flower beds—can disrupt drainage patterns.</p>
-
-  <h4>Aging Drainage Infrastructure</h4>
-  <p>If your property is over 20 years old, the original drainage system may have failed. Underground pipes crack, drain fields clog, and catch basins collapse over time. In Tampa's corrosive environment, this happens faster than in northern states.</p>
-
-  <h3>Types of Drainage Problems We See in Tampa Bay</h3>
-
-  <h4>Localized Puddles and Wet Spots</h4>
-  <p>You notice standing water in specific areas after rain, but it eventually drains. This usually indicates a low spot in your grading or a shallow subsurface issue. Sometimes a simple French drain or catch basin is all you need.</p>
-
-  <h4>Swampy Yard That Never Fully Dries</h4>
-  <p>Your entire yard stays soggy for days after rain. This suggests a high water table or that surface water can't reach underground drainage. Sump pumps, French drains, or perimeter drainage may be needed.</p>
-
-  <h4>Water Pooling Near Your Foundation or Deck</h4>
-  <p>This is serious. Water against your foundation or under elevated structures can cause settling, cracks, and structural damage. Immediate drainage correction is essential.</p>
-
-  <h4>Erosion Gullies or Landscape Washout</h4>
-  <p>Water flowing across your property during storms creates visible erosion channels. This means water volume exceeds your drainage capacity and needs proper channels or catch basins to direct it safely.</p>
-
-  <h4>Neighbor's Water Draining Into Your Property</h4>
-  <p>Sometimes the problem isn't your yard—it's upslope properties directing their water into yours. This requires creative solutions like swales, berms, or French drains to intercept and redirect the water.</p>
-
-  <h3>Professional Drainage Solutions for Tampa Homes</h3>
-  <p>Water Oak Irrigation designs and installs drainage systems engineered specifically for Tampa Bay's climate and soil conditions. Here are the solutions we most commonly recommend:</p>
-
-  <h4>French Drains (Perforated Subsurface Drains)</h4>
-  <p><strong>How it works:</strong> We dig a sloped trench, line it with landscape fabric, add perforated pipe surrounded by gravel, and cover it. Water percolates through soil into the pipe and flows downhill to daylight (surface) or a drain destination.</p>
-
-  <p><strong>Best for:</strong> Localized wet spots, areas with high water tables, or foundation-adjacent pooling.</p>
-
-  <p><strong>Cost range:</strong> $1,500-3,000 for a typical residential installation, depending on trench length and complexity.</p>
-
-  <h4>NDS Catch Basin Systems</h4>
-  <p><strong>How it works:</strong> Catch basins intercept surface water and channel it underground to a drainage destination. Multiple basins can be connected to create comprehensive yard drainage.</p>
-
-  <p><strong>Best for:</strong> Properties with erosion gullies, water flowing across the surface, or low-lying areas that collect runoff.</p>
-
-  <p><strong>Cost range:</strong> $800-1,500 per catch basin plus installation, depending on destination.</p>
-
-  <h4>Channel Drains (Surface Drainage)</h4>
-  <p><strong>How it works:</strong> Shallow trenches with drain channels direct water away from problem areas. We often use these near decks, patios, or along property lines.</p>
-
-  <p><strong>Best for:</strong> Surface water management, creating barriers to keep neighbor's water off your property, protecting landscaping or structures.</p>
-
-  <p><strong>Cost range:</strong> $500-1,500 depending on length and materials.</p>
-
-  <h4>Sump Pump Systems</h4>
-  <p><strong>How it works:</strong> For properties with groundwater or high water tables, a pit collects water and a pump actively removes it to a safe discharge area.</p>
-
-  <p><strong>Best for:</strong> Basements or crawl spaces with moisture problems, properties below water table, areas where gravity drainage isn't possible.</p>
-
-  <p><strong>Cost range:</strong> $2,500-4,500 for installation including pit, pump, and discharge line.</p>
-
-  <h4>Yard Regrading and Swales</h4>
-  <p><strong>How it works:</strong> We adjust your landscape's slope to direct water away from buildings and toward proper drainage or daylight. Swales are shallow, vegetated drainage channels that look natural while effectively moving water.</p>
-
-  <p><strong>Best for:</strong> Properties where water flows toward your house, or where existing grading is incorrect.</p>
-
-  <p><strong>Cost range:</strong> $2,000-5,000+ depending on yard size and elevation changes needed.</p>
-
-  <h3>Why DIY Drainage Usually Fails</h3>
-  <p>Many Tampa homeowners try to solve drainage problems themselves with disappointing results:</p>
-
-  <ul>
-    <li><strong>Incorrect Slope:</strong> A French drain that doesn't have proper slope (at least 1% grade) won't flow water effectively. DIY installations often fail because of this.</li>
-    <li><strong>Wrong Pipe or Material:</strong> Using solid pipe instead of perforated, or choosing materials incompatible with Florida's soil chemistry causes premature failure.</li>
-    <li><strong>Poor Location Selection:</strong> Digging a drain in the wrong spot won't solve the underlying water problem.</li>
-    <li><strong>Missing Destination:</strong> A drain that just moves water to another problem area on your property doesn't solve anything.</li>
-    <li><strong>Soil Compaction Issues:</strong> If soil isn't properly prepared and compacted, drains fail within months.</li>
-  </ul>
-
-  <p>A professional drainage system designed and installed properly lasts 20+ years. A failed DIY project often costs more to fix than hiring a professional initially would have cost.</p>
-
-  <h3>Our Drainage Installation Process</h3>
-  <p><strong>Step 1: On-Site Assessment</strong> — We visit your property and evaluate the drainage problem, water source, soil type, and topography to understand the root cause.</p>
-
-  <p><strong>Step 2: Design Custom Solution</strong> — Based on our assessment, we design a drainage system tailored to your specific property. This might include French drains, catch basins, swales, or combinations thereof.</p>
-
-  <p><strong>Step 3: Obtain Permits</strong> — We handle all necessary city permits and inspections to ensure your drainage system meets local codes.</p>
-
-  <p><strong>Step 4: Professional Installation</strong> — Our team excavates, installs proper materials with correct slope and compaction, and ensures water flows to the designated destination.</p>
-
-  <p><strong>Step 5: Testing and Final Inspection</strong> — We test the system during a simulated heavy rainfall (or natural rain) to verify proper function before and after your final inspection.</p>
-
-  <h3>Drainage Solutions for Your Tampa Bay Area</h3>
-  <p>We provide expert drainage installation across Tampa Bay, including:</p>
-
-  <ul>
-    <li>South Tampa (Hyde Park, Palma Ceia, Davis Island)</li>
-    <li>Central Tampa (Westchase, Town 'n' Country)</li>
-    <li>New Tampa & Tampa Palms</li>
-    <li>Wesley Chapel & Pasco County</li>
-    <li>Carrollwood, Odessa & Lutz</li>
-    <li>Pinellas County (St. Petersburg, Clearwater, Largo)</li>
-  </ul>
-
-  <h3>Drainage Cost in Tampa Bay</h3>
-  <p>Professional drainage system costs vary based on your specific situation:</p>
-
-  <ul>
-    <li><strong>Small French drain (localized wet spot):</strong> $1,500-2,500</li>
-    <li><strong>Comprehensive French drain system:</strong> $3,000-6,000</li>
-    <li><strong>Catch basin installation:</strong> $800-1,500 per basin</li>
-    <li><strong>Channel drain:</strong> $500-1,500</li>
-    <li><strong>Sump pump system:</strong> $2,500-4,500</li>
-    <li><strong>Regrading and swales:</strong> $2,000-5,000+</li>
-  </ul>
-
-  <p>Most properties benefit from combination solutions. We provide free estimates with detailed recommendations for your specific property.</p>
-
-  <h3>Will Drainage Work Damage My Landscaping?</h3>
-  <p>Professional drainage installation requires digging, but we minimize landscape impact and can often work around existing trees and plantings. After installation, we restore your yard and can integrate drainage with replanting and landscaping improvements.</p>
-
-  <h3>Questions About Drainage Solutions</h3>
-
-  <h4>How long does drainage installation take?</h4>
-  <p>Most projects take 1-3 days depending on scope. Larger comprehensive systems may take longer.</p>
-
-  <h4>Do I need permits for drainage work?</h4>
-  <p>Most drainage work in Tampa requires permits. We handle all permit acquisition and inspections—this is included in our estimate.</p>
-
-  <h4>Will drainage work solve my flooding permanently?</h4>
-  <p>A professionally designed and installed drainage system eliminates standing water and flooding in 99% of cases. In rare situations with extreme water table issues, supplemental sump pumping may be needed seasonally.</p>
-
-  <h4>Can you combine drainage with my irrigation system?</h4>
-  <p>Absolutely! Many of our customers combine drainage installation with irrigation repair and upgrade. We design systems that coexist perfectly.</p>
-
-  <div class="post-cta">
-    <strong>Tired of a Flooded Yard?</strong>
-    <p>Let our Tampa Bay drainage experts design and install a system that keeps your property dry and protected year-round.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Drainage Consultation</a>
-  </div>
-
-  <p><strong>Or call us directly:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We'll discuss your drainage needs and get you scheduled for a free on-site assessment.</p>
-</div>
-
-<!-- POST 6: SAINT AUGUSTINE GRASS FUNGUS -->
-<div id="post6" class="post-content" style="display:none">
-  <span class="post-tag">Lawn Care & Turf Management</span>
-  <h2 class="post-title">Saint Augustine Grass Fungus in Tampa Bay: Prevention & Treatment Guide for South Tampa Homeowners</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>If you're a South Tampa homeowner, you've probably seen it: those brown, dead patches spreading across your Saint Augustine lawn, despite regular watering and care. That's fungus—and it's one of the most damaging threats to Florida lawns.</p>
-
-  <p>Saint Augustine grass is the dominant turf type in South Tampa, Hyde Park, Davis Island, and throughout the Tampa Bay area. It's drought-tolerant, handles our sandy soil well, and provides that lush, carpet-like appearance that makes Tampa properties beautiful. But Saint Augustine's dense growth also makes it the perfect environment for fungal diseases that thrive in humidity and heat.</p>
-
-  <p>In this comprehensive guide, we'll explain exactly what's killing your Saint Augustine lawn, how to prevent fungal outbreaks, and when to call a professional for turf management treatment.</p>
-
-  <h3>Why Saint Augustine Grass Gets Fungus (Tampa Bay's Perfect Storm)</h3>
-  <p>Tampa's climate is literally ideal for fungal disease development. Understanding why fungus thrives here helps you prevent it:</p>
-
-  <h4>High Humidity + Warm Temperatures</h4>
-  <p>Florida's subtropical climate provides the exact conditions fungi need. Temperature between 70-85°F and humidity above 70% create a fungal breeding ground. During Tampa's summer months (June-September), we rarely see conditions below these thresholds.</p>
-
-  <h4>Night-Time Leaf Wetness</h4>
-  <p>Dew, irrigation overspray, or rainfall leaves Saint Augustine grass blades wet overnight. Fungal spores need 6-8 hours of leaf wetness to germinate and infect grass. In Tampa, this happens almost every night during warm months.</p>
-
-  <h4>Sandy Soil = Poor Water Drainage</h4>
-  <p>Tampa's sandy soil drains quickly, which is good for preventing root rot, but it also means it dries out fast. When homeowners irrigate to keep their lawns green, they often over-water, creating the humid, wet conditions fungi love. If your irrigation isn't properly adjusted for Florida, you're actually feeding the fungus.</p>
-
-  <h4>Thatch Buildup in Dense Saint Augustine</h4>
-  <p>Saint Augustine naturally accumulates thatch (dead grass tissue that builds up at the soil surface). Thatch creates a wet, humid microclimate at the grass base—the perfect incubator for fungal spores.</p>
-
-  <h4>Poor Lawn Maintenance</h4>
-  <p>If your lawn isn't regularly aerated, fertilized correctly, or mowed at the proper height, it becomes weak and susceptible to fungal invasion. A healthy, vigorous Saint Augustine lawn resists fungal disease better than a struggling one.</p>
-
-  <h3>Common Fungal Diseases Destroying South Tampa Lawns</h3>
-
-  <h4>1. Brown Patch (Rhizoctonia solani)</h4>
-  <p><strong>What it looks like:</strong> Large, circular patches of brown or tan grass, often with a darker border and a lighter center. Patches can grow rapidly—sometimes expanding a foot or more per day during active disease.</p>
-
-  <p><strong>When it strikes:</strong> Brown patch is worst in late spring (April-May) and fall (September-October) when temperatures are warm but not scorching. It's less active during peak summer heat.</p>
-
-  <p><strong>Why Saint Augustine is vulnerable:</strong> Saint Augustine's dense growth and high thatch layer make it extremely susceptible. Brown patch starts at the soil surface and works upward, so the thicker your thatch, the worse the infection.</p>
-
-  <p><strong>Real-world example:</strong> We recently treated a South Tampa property in Hyde Park where brown patch spread across 40% of the lawn in just 3 weeks. The homeowner had switched to daily irrigation during a hot spell, creating perfect fungal conditions. After treatment and irrigation adjustment, the lawn recovered completely.</p>
-
-  <h4>2. Dollar Spot (Sclerotinia homoeocarpa)</h4>
-  <p><strong>What it looks like:</strong> Silver dollar-sized (or smaller) spots of tan or straw-colored dead grass. Unlike brown patch, dollar spot patches are much smaller and more numerous, creating a mottled appearance across the lawn.</p>
-
-  <p><strong>When it strikes:</strong> Dollar spot is active year-round in Florida, but worst during warm, humid spring and fall months. It also thrives on nutrient-poor lawns, so it's often a sign of fertilization problems.</p>
-
-  <p><strong>Why Saint Augustine is vulnerable:</strong> Dollar spot loves dense turf and is very common on Saint Augustine, especially if the grass is under-fertilized or stressed.</p>
-
-  <h4>3. Leaf Spot and Melting Out (Drechslera, Bipolaris, Curvularia)</h4>
-  <p><strong>What it looks like:</strong> Dark brown or purple spots on grass blades, often with yellow halos. As the disease progresses, blades wither and the grass thins, eventually leading to bare patches.</p>
-
-  <p><strong>When it strikes:</strong> This complex of fungi is worst during warm, wet conditions. In Tampa, it's active spring through fall.</p>
-
-  <p><strong>Why Saint Augustine is vulnerable:</strong> Saint Augustine's broad leaf blades provide a large target for spot fungi. Wet conditions from irrigation or rain create perfect conditions for spore spread.</p>
-
-  <h4>4. Take-All Root Rot (Gaeumannomyces graminis)</h4>
-  <p><strong>What it looks like:</strong> Sudden, severe yellowing and death of large sections of grass. Unlike spot diseases, take-all affects the entire plant including roots, so affected areas don't recover on their own.</p>
-
-  <p><strong>When it strikes:</strong> Take-all is most serious during cooler months (November-March) when root growth slows. Recovery happens faster in summer heat, which is why this disease is more damaging in Florida's mild winters.</p>
-
-  <p><strong>Why it's dangerous:</strong> Take-all kills grass at the root level, so irrigation and fungicide won't help much. Prevention is critical. The fungus spreads through soil and can remain dormant for years.</p>
-
-  <h3>How to Spot Fungus EARLY (Before It Destroys Your Lawn)</h3>
-
-  <div class="post-tip">
-    <strong>🔍 Early Warning Signs:</strong><br>
-    <strong>Small tan spots appearing</strong> — Dollar spot or leaf spot fungus are starting. Treat immediately before they spread.<br><br>
-    <strong>Circular patch of brown grass with a darker ring</strong> — Brown patch is developing. The border defines the active infection zone.<br><br>
-    <strong>Grass blades have spots with yellow halos</strong> — Leaf spot fungus is present. Check if spots have the characteristic appearance.<br><br>
-    <strong>Blades are dying from the tip down</strong> — Melting out or take-all root rot may be developing.<br><br>
-    <strong>Sudden wilting despite adequate moisture</strong> — Root rot fungus damage (take-all or pythium) is likely.<br><br>
-    <strong>White, powdery coating on blades</strong> — Powdery mildew is developing (less common in Tampa's humidity, more common in shade).<br><br>
-    <strong>Musty odor in the lawn</strong> — Fungal activity is significant. Immediate action needed.
-  </div>
-
-  <h3>Preventing Fungus: The Best Treatment</h3>
-  <p>Preventing fungal disease is far easier (and cheaper) than treating a severe outbreak. Here's how to keep your South Tampa lawn fungus-free:</p>
-
-  <h4>1. Optimize Your Irrigation System (Critical!)</h4>
-  <p>This is the #1 fungus prevention strategy: water your lawn correctly.</p>
-
-  <ul>
-    <li><strong>Water in early morning (4-7 AM)</strong> — Never in evening. Evening irrigation leaves grass wet overnight, creating fungal conditions.</li>
-    <li><strong>Water deeply but less frequently</strong> — This encourages deep roots and allows the soil to dry between waterings. Shallow, frequent watering creates constant humidity.</li>
-    <li><strong>Avoid afternoon heat watering</strong> — Not only is it inefficient in Tampa heat, it stresses grass and makes it susceptible to fungus.</li>
-    <li><strong>Get your system optimized professionally</strong> — We can adjust your zones, run times, and schedule to provide ideal moisture without creating fungal conditions.</li>
-  </ul>
-
-  <h4>2. Proper Mowing Height and Frequency</h4>
-  <p>For Saint Augustine in Tampa: Mow at 2.5-3.5 inches height, cutting no more than 1/3 of the blade length at once.</p>
-
-  <ul>
-    <li>Cutting too short (below 2 inches) stresses grass and invites fungal invasion</li>
-    <li>Cutting more than 1/3 of the blade creates wounds where spores enter</li>
-    <li>Keep mower blades sharp—dull blades tear grass, creating infection points</li>
-    <li>Don't bag clippings in fungal-heavy periods (spores spread via equipment)</li>
-  </ul>
-
-  <h4>3. Proper Fertilization</h4>
-  <p>An undernourished lawn is a fungus-prone lawn. Saint Augustine needs:</p>
-
-  <ul>
-    <li><strong>Spring (March-May):</strong> Moderate nitrogen fertilization to support growth</li>
-    <li><strong>Summer (June-August):</strong> Reduce nitrogen (high nitrogen during heat increases fungal susceptibility)</li>
-    <li><strong>Fall (September-November):</strong> Resume nitrogen to encourage growth before dormancy</li>
-    <li><strong>Winter (December-February):</strong> Light fertilization or none, depending on your lawn's needs</li>
-  </ul>
-
-  <p>Over-fertilization with nitrogen makes grass succulent and attractive to fungi. Under-fertilization makes grass weak and vulnerable. Balance is critical.</p>
-
-  <h4>4. Thatch Management</h4>
-  <p>Saint Augustine naturally accumulates thatch. Every 2-3 years, have your lawn:</p>
-
-  <ul>
-    <li>Aerified — This breaks up thatch, improves drainage, and reduces fungal habitat</li>
-    <li>Dethatched — Physically remove excessive dead grass tissue</li>
-    <li>Power-raked — For severe thatch buildup</li>
-  </ul>
-
-  <p>Removing thatch reduces the wet, humid microclimate fungi love.</p>
-
-  <h4>5. Improve Air Circulation</h4>
-  <p>Fungi need moisture and stagnant air to thrive. To increase airflow:</p>
-
-  <ul>
-    <li>Prune tree branches to allow sunlight and airflow to reach grass</li>
-    <li>Remove landscape debris that traps moisture</li>
-    <li>Avoid dense landscape plantings that create humid microclimates near grass</li>
-  </ul>
-
-  <h3>When DIY Prevention Isn't Enough: Professional Treatment</h3>
-  <p>If you've followed prevention steps and fungus still appears, it's time for professional turf management treatment.</p>
-
-  <h4>Fungicide Treatment Options</h4>
-  <p><strong>Preventive fungicides:</strong> Applied before fungal disease develops, during high-risk periods (spring and fall). These are cheaper and more effective than treating established fungus.</p>
-
-  <p><strong>Curative fungicides:</strong> Applied when fungus is actively spreading. These are more expensive and less reliable than prevention, but necessary when disease is present.</p>
-
-  <p><strong>Biological fungicides:</strong> Safer for the environment and pets, but often less potent than chemical options.</p>
-
-  <p>We recommend a combination approach: preventive fungicide during high-risk seasons, plus excellent cultural practices (mowing, irrigation, aeration) year-round.</p>
-
-  <h4>Professional Turf Management Program Benefits</h4>
-  <p>At Water Oak Irrigation, our South Tampa turf management program includes:</p>
-
-  <ul>
-    <li>Regular lawn inspections (monthly during growing season)</li>
-    <li>Early fungal disease detection and immediate response</li>
-    <li>Irrigation system optimization to prevent fungal conditions</li>
-    <li>Fertilization schedule tailored to Saint Augustine and season</li>
-    <li>Thatch management and aeration when needed</li>
-    <li>Professional fungicide application during high-risk periods</li>
-    <li>Documentation and monitoring of results</li>
-  </ul>
-
-  <h3>South Tampa Neighborhoods We Serve</h3>
-  <p>We provide professional turf management and fungal disease treatment throughout South Tampa, including:</p>
-
-  <ul>
-    <li>Hyde Park</li>
-    <li>Culbreath Isles</li>
-    <li>Palma Ceia</li>
-    <li>Davis Island</li>
-    <li>Harbour Island</li>
-    <li>South Hyde Park</li>
-    <li>Carver City</li>
-  </ul>
-
-  <p>If your South Tampa lawn is showing signs of fungal disease, contact us for a free evaluation and treatment recommendation.</p>
-
-  <h3>Common Questions About Saint Augustine Fungus</h3>
-
-  <h4>Can I use a home fungicide from the garden center?</h4>
-  <p>You can, but professional-grade fungicides are more effective. Garden center products are often weaker formulations and may not be applied correctly. We recommend professional treatment for active fungal disease.</p>
-
-  <h4>If I treat the fungus, will it come back?</h4>
-  <p>If you just treat fungus without addressing the underlying conditions (irrigation, fertilization, thatch), yes, it will likely return. That's why we always address root causes alongside treatment.</p>
-
-  <h4>Is fungicide safe for pets and kids?</h4>
-  <p>Modern fungicides are relatively safe when applied properly, with a short re-entry time (usually 24 hours). We'll advise you on any precautions needed for your specific situation.</p>
-
-  <h4>How often do I need professional fungicide treatment?</h4>
-  <p>During high-risk seasons (spring and fall), a monthly preventive program is ideal. In low-risk months, prevention focuses on cultural practices (mowing, irrigation, fertilization) rather than fungicide.</p>
-
-  <h4>Can my lawn recover from severe fungal damage?</h4>
-  <p>Yes, in most cases. Saint Augustine is resilient, and once you stop the active infection and address its causes, the grass will fill in damaged areas. Severe cases (like take-all) may require reseeding, but most fungal damage recovers within weeks of treatment.</p>
-
-  <div class="post-cta">
-    <strong>Is Your South Tampa Lawn Showing Fungal Disease?</strong>
-    <p>Don't wait for brown patch to destroy your entire lawn. Our professionals can diagnose the problem and create a treatment and prevention plan tailored to your South Tampa property.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Turf Management Evaluation</a>
-  </div>
-
-  <p><strong>Or call us directly:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We'll assess your lawn's fungal disease status and recommend the best treatment approach for your South Tampa home.</p>
-
-  <p style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.1);"><strong>🛡️ Preventative Edge:</strong> Proper irrigation maintenance (correct watering schedule, optimal moisture levels) prevents 80% of fungal diseases. <a href="irrigation-maintenance.html" style="color: var(--blue-bright); font-weight: 600;">Start a maintenance plan</a> to keep your South Tampa lawn fungus-free year-round.</p>
-</div>
-
-<!-- POST 7: SMART IRRIGATION CONTROLLERS -->
-<div id="post7" class="post-content" style="display:none">
-  <span class="post-tag">Smart Technology</span>
-  <h2 class="post-title">Smart Irrigation Controllers in Tampa: Save Water & Money Automatically</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>If you're still using a basic battery-operated irrigation timer, you're leaving money on the table every single day. Smart irrigation controllers—WiFi-enabled systems that automatically adjust watering based on weather, soil moisture, and seasonal changes—are revolutionizing how Tampa Bay homeowners manage their landscapes.</p>
-
-  <p>The benefits are significant: most Tampa residents save $200-400 annually on water bills, while their lawns actually stay healthier. In this guide, we'll explain how smart controllers work, which systems are best for Tampa properties, and how to maximize your savings and landscape health.</p>
-
-  <h3>How Smart Irrigation Controllers Work</h3>
-  <p>Smart controllers combine three technologies:</p>
-
-  <ul>
-    <li><strong>Weather Intelligence:</strong> Connects to local weather data and automatically skips watering when rain is forecasted or has fallen</li>
-    <li><strong>Soil Moisture Sensing:</strong> Measures actual soil moisture and waters only when needed, not on a preset schedule</li>
-    <li><strong>Remote Control:</strong> WiFi connection lets you control your system from your phone, anywhere in the world</li>
-  </ul>
-
-  <p>The result? Perfectly timed watering that adapts daily to Tampa's changeable weather and seasonal patterns.</p>
-
-  <h3>Why Smart Controllers Solve Tampa's Watering Challenges</h3>
-
-  <h4>Problem: Tampa's Unpredictable Rain</h4>
-  <p>Tampa gets intense thunderstorms almost daily during summer, yet many homeowners run their irrigation systems on set schedules regardless of recent rainfall. This wastes water and stresses lawns with over-watering.</p>
-
-  <p><strong>Solution:</strong> Smart controllers skip watering when rain sensors detect precipitation. A single skipped watering during Tampa's rainy season pays back a smart controller investment in water savings alone.</p>
-
-  <h4>Problem: Water Restrictions</h4>
-  <p>Tampa Bay occasionally implements water use restrictions limiting irrigation to specific days. Old timers require manual reprogramming, which many homeowners forget.</p>
-
-  <p><strong>Solution:</strong> Smart controllers can be remotely adjusted to comply with restrictions, and many systems have restriction-compliance features built in.</p>
-
-  <h4>Problem: Sandy Soil Drainage</h4>
-  <p>Tampa's sandy soil drains differently than northern soil. Soil moisture sensors adapt to local conditions, watering when soil is actually dry rather than following a generic schedule.</p>
-
-  <p><strong>Solution:</strong> Moisture-based systems deliver the right amount of water for your specific soil, not wasting water on over-watering.</p>
-
-  <h4>Problem: Seasonal Variations</h3>
-  <p>Saint Augustine grass needs different watering in spring growth (more water), summer heat stress (moderate water), and fall transition (less water). Seasonal adjustments aren't automatic on basic timers.</p>
-
-  <p><strong>Solution:</strong> Smart controllers automatically adjust seasonal watering based on plant type, soil, and weather patterns.</p>
-
-  <h3>How Much Money Will You Save?</h3>
-
-  <p>Real Tampa savings data:</p>
-
-  <ul>
-    <li><strong>Average water bill reduction:</strong> 15-30%</li>
-    <li><strong>Typical monthly savings:</strong> $20-40 for residential properties</li>
-    <li><strong>Annual savings:</strong> $240-480 per year</li>
-    <li><strong>Payback period:</strong> 2-4 years (smart controller plus installation typically costs $800-1,500)</li>
-  </ul>
-
-  <p>After the payback period, you're saving hundreds annually—indefinitely.</p>
-
-  <h3>Popular Smart Controller Systems for Tampa</h3>
-
-  <h4>Rachio 3</h4>
-  <p>Most popular, reasonably priced ($300-400). Weather-based watering, app control, integrates with Amazon Alexa. Good for residential homeowners who want simplicity.</p>
-
-  <h4>Hunter Hydrawise</h4>
-  <p>Professional-grade option. More advanced controls, better for complex irrigation systems. Integrates with professional irrigation equipment. Good for larger properties or commercial applications.</p>
-
-  <h4>Orbit</h4>
-  <p>Budget-friendly option ($200-300). Basic smart features, app control, good entry point if you're new to smart irrigation. Less advanced than Rachio or Hydrawise.</p>
-
-  <h4>Weather-Based Adjustment Only</h4>
-  <p>If you love your existing controller, some smart sensor systems retrofit to existing timers, adding weather-based or soil moisture adjustment without replacing the entire controller.</p>
-
-  <h3>Installation and Setup</h3>
-
-  <p><strong>DIY Installation:</strong> Smart controllers are designed for easy installation. If you're comfortable with basic wiring, you can install many systems yourself by replacing your existing timer.</p>
-
-  <p><strong>Professional Installation:</strong> We recommend professional installation because we can:</p>
-
-  <ul>
-    <li>Optimize your irrigation zones before installing the controller</li>
-    <li>Ensure proper watering schedule calibration for your Tampa property</li>
-    <li>Integrate with existing irrigation upgrades (new valves, heads, etc.)</li>
-    <li>Provide training and ongoing optimization</li>
-  </ul>
-
-  <h3>Smart Controller Setup Tips for Tampa Success</h3>
-
-  <h4>Input Accurate Property Information</h4>
-  <p>The better data you provide (soil type, plant types, slope, sun exposure), the more accurate the controller's recommendations. Take time setting these up correctly.</p>
-
-  <h4>Start with Conservative Settings</h4>
-  <p>Smart controllers often water more aggressively than necessary at first. Monitor your lawn and adjust downward if you see over-watering signs.</p>
-
-  <h4>Adjust Seasonally</h4>
-  <p>While smart controllers adapt automatically, seasonal tweaks (like reducing watering in winter dormancy) optimize savings further.</p>
-
-  <h4>Monitor the App</h4>
-  <p>Check the app monthly to see what the system is doing. This helps you understand Tampa's irrigation patterns and spot problems early.</p>
-
-  <h3>Will Smart Controllers Work With Your Existing System?</h3>
-
-  <p><strong>Yes, in most cases.</strong> Smart controllers are designed to replace standard timers. However:</p>
-
-  <ul>
-    <li>Your existing wiring must be intact (broken wires need professional repair)</li>
-    <li>Old solenoid valves may need replacement to work optimally with smart systems</li>
-    <li>Broken sprinkler heads or lines should be fixed before installation</li>
-  </ul>
-
-  <p>We can assess your system and recommend the best smart controller option for your specific setup.</p>
-
-  <h3>Smart Controllers + Professional Turf Management = Maximum Results</h3>
-
-  <p>A smart controller is even more effective when combined with professional irrigation optimization:</p>
-
-  <ul>
-    <li>We optimize your zone design and coverage before installing the controller</li>
-    <li>We calibrate watering schedules to your specific property</li>
-    <li>We monitor performance and fine-tune settings seasonally</li>
-    <li>We catch problems (broken heads, leaks, valve issues) before the smart controller can't overcome them</li>
-  </ul>
-
-  <div class="post-cta">
-    <strong>Ready to Cut Your Water Bill by 20-30%?</strong>
-    <p>Smart irrigation controllers save Tampa homeowners hundreds annually while keeping lawns healthier. Let our professionals install and optimize your system for maximum efficiency.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Smart Controller Consultation</a>
-  </div>
-
-  <p><strong>Or call us:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We'll assess your current system and recommend the best smart controller option for your Tampa property.</p>
-</div>
-
-<!-- POST 8: PROFESSIONAL IRRIGATION DESIGN -->
-<div id="post8" class="post-content" style="display:none">
-  <span class="post-tag">System Design</span>
-  <h2 class="post-title">Professional Irrigation Design for Tampa: The Right System for Your Property</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>A well-designed irrigation system is the foundation of a healthy, beautiful landscape. Poor design leads to dead patches, over-watered areas, water waste, high bills, and wasted money on repairs. Professional irrigation design ensures full coverage, efficiency, and code compliance—protecting your landscape investment for decades.</p>
-
-  <p>Whether you're a homeowner installing your first system, a commercial property manager upgrading existing infrastructure, or a builder developing a new community, proper irrigation design is non-negotiable. Here's what professional design includes and why it matters.</p>
-
-  <h3>What Professional Irrigation Design Includes</h3>
-
-  <h4>Step 1: Site Assessment</h4>
-  <p>Before drawing anything, we evaluate your property:</p>
-
-  <ul>
-    <li>Topography and slope (water flows downhill—design works with this)</li>
-    <li>Soil type and infiltration rate (sandy soil drains fast; clay drains slow)</li>
-    <li>Sun exposure and shade patterns (different areas need different water amounts)</li>
-    <li>Plant types and water requirements (turf, shrubs, beds need different zones)</li>
-    <li>Water source type and pressure (well, municipal supply, reclaimed water)</li>
-    <li>Existing infrastructure (electrical, gas, plumbing lines to avoid)</li>
-  </ul>
-
-  <h4>Step 2: Hydraulic Calculation</h4>
-  <p>We calculate water pressure requirements, flow rates, and zone capacity to ensure adequate water delivery to all areas. This prevents common problems like low pressure at zone ends or clogged lines.</p>
-
-  <h4>Step 3: Valve and Backflow Protection Design</h4>
-  <p>We design proper valve placement, sizing, and backflow prevention (required by Florida code). This ensures water flows correctly and complies with local regulations.</p>
-
-  <h4>Step 4: Sprinkler Layout and Head Selection</h4>
-  <p>We design sprinkler placement for complete, uniform coverage with minimal overlap and no dry spots. Different head types (pop-ups, rotors, drip emitters) are chosen based on coverage area and plant needs.</p>
-
-  <h4>Step 5: Zone Planning</h4>
-  <p>We group areas with similar water needs into zones (turf zone, shrub zone, flower bed zone, etc.). This allows proper watering for each plant type without over- or under-watering.</p>
-
-  <h4>Step 6: Controller and Timer Design</h3>
-  <p>We recommend appropriate controller type and programming based on property size, complexity, and automation needs (basic timer, smart controller, professional-grade system).</p>
-
-  <h4>Step 7: Permitting and Compliance</h4>
-  <p>We handle all necessary permits and ensure designs meet Florida Irrigation Society standards, water management district requirements, and local codes.</p>
-
-  <h3>Why DIY or Cheap Design Fails</h3>
-
-  <p><strong>Problem: Uneven Coverage</strong></p>
-  <p>Non-professional design often leaves dry spots where grass dies and over-watered areas where plants struggle. Fixing this requires expensive modifications later.</p>
-
-  <p><strong>Problem: Over-Sizing Zones</strong></p>
-  <p>Combining plants with different water needs in one zone means either some plants are over-watered or others are under-watered. Professional design separates them.</p>
-
-  <p><strong>Problem: Inadequate Water Pressure</strong></p>
-  <p>Poorly calculated designs don't account for pressure loss over distance. Sprinklers at the end of a line may have 30% less pressure, delivering poor coverage.</p>
-
-  <p><strong>Problem: Code Violations</strong></p>
-  <p>Florida requires backflow prevention and proper valve protection. DIY systems often miss these requirements, creating safety and legal risks.</p>
-
-  <p><strong>Problem: Inefficient Water Use</strong></p>
-  <p>Poor design wastes water through overlap, runoff, and poor scheduling. Professional design saves money indefinitely through improved efficiency.</p>
-
-  <h3>Residential vs. Commercial Design</h3>
-
-  <h4>Residential Design</h4>
-  <p>Typically simpler—fewer zones, smaller property. Focus is on aesthetic appeal plus water efficiency. Installation is straightforward.</p>
-
-  <h4>Commercial/HOA Design</h4>
-  <p>More complex. May include:</p>
-
-  <ul>
-    <li>Multiple landscape zones (turf, shrubs, trees, flower beds)</li>
-    <li>Large-scale water requirements</li>
-    <li>Remote monitoring and smart controls</li>
-    <li>Strict water-use restrictions compliance</li>
-    <li>Mainline design with multiple valve stations</li>
-  </ul>
-
-  <p>Commercial systems require more detailed hydraulic analysis and often use reclaimed water or well supplies.</p>
-
-  <h3>New Installation vs. System Upgrade Design</h3>
-
-  <h4>New Installation Design</h4>
-  <p>We start from scratch, designing optimal layout for your property. No compromises with old infrastructure.</p>
-
-  <h4>System Upgrade Design</h4>
-  <p>Working within existing installation constraints, we upgrade valves, heads, controllers, or lines to improve efficiency and coverage. Often more cost-effective than complete replacement.</p>
-
-  <h3>Irrigation Design for Tampa's Specific Challenges</h3>
-
-  <p><strong>Water Restriction Compliance:</strong> We design zones and programming to comply with Modified Phase restrictions (one day per week watering during dry season).</p>
-
-  <p><strong>Sandy Soil Adaptation:</strong> Design accounts for rapid drainage and implements soil moisture sensors or adjusted run times to prevent drought stress.</p>
-
-  <p><strong>Heat Stress Management:</strong> Saint Augustine turf under summer heat stress needs different watering than spring growth. Design includes seasonal adjustment recommendations.</p>
-
-  <p><strong>Reclaimed Water Integration:</strong> Many Tampa properties can use reclaimed water (cheaper, uses less potable water). Design includes proper filtration and protection for reclaimed systems.</p>
-
-  <h3>Timeline and Cost for Professional Design</h3>
-
-  <p><strong>Design Timeline:</strong> 1-3 weeks from site assessment to final design plan, depending on property complexity.</p>
-
-  <p><strong>Design Cost:</strong> $500-2,000 depending on property size and complexity. This is a one-time investment that prevents tens of thousands in mistakes.</p>
-
-  <p><strong>Installation Cost:</strong> Varies widely ($3,000-$50,000+ depending on system size), but proper design actually reduces installation costs by avoiding redesigns and modifications.</p>
-
-  <h3>Common Questions About Irrigation Design</h3>
-
-  <h4>Can I install the system myself after you provide the design?</h4>
-  <p>Technically yes, but we recommend professional installation because proper execution requires specific tools, experience, and knowledge of Florida code requirements. A poorly installed design won't perform as intended.</p>
-
-  <h4>How long will a properly designed system last?</h4>
-  <p>Well-designed systems last 15-20+ years for valves and controllers, 10-15 years for sprinkler heads. Proper maintenance extends life significantly.</p>
-
-  <h4>Can I modify a system design later?</h4>
-  <p>Yes, but modifications are easier if the original design is solid. Poor original design makes modifications expensive and limiting.</p>
-
-  <div class="post-cta">
-    <strong>Need Professional Irrigation Design?</strong>
-    <p>From residential lawns to commercial properties, we design systems that deliver perfect coverage, water efficiency, and decades of reliable service.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Request Design Consultation</a>
-  </div>
-
-  <p><strong>Or call us:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We'll assess your property and provide a detailed irrigation design plan.</p>
-</div>
-
-<!-- POST 9: WELL PUMP SERVICE -->
-<div id="post9" class="post-content" style="display:none">
-  <span class="post-tag">Equipment Service</span>
-  <h2 class="post-title">Well Pump Service in Tampa Bay: Repair, Replacement & Maintenance Guide</h2>
-  <p class="post-meta">March 15, 2026 &nbsp;·&nbsp; Written by Dan Letbetter, Owner — Water Oak Irrigation</p>
-
-  <p>For Tampa Bay properties with private wells, a broken well pump means your entire irrigation system stops working. Unlike municipal water connections that continue working when problems occur, well pumps require regular maintenance and occasional professional service to prevent system failure.</p>
-
-  <p>In this comprehensive guide, we explain how well pumps work, how to spot problems early, when to repair versus replace, and how to maintain pumps for maximum lifespan and reliability.</p>
-
-  <h3>How Well Pump Systems Work (The Basics)</h3>
-
-  <p>A well pump irrigation system includes three main components:</p>
-
-  <h4>1. The Well Pump (Submersible or Jet)</h4>
-  <p><strong>Submersible pumps</strong> (most common in Florida) sit at the bottom of the well and push water up. They're efficient and reliable, but repair requires pulling the entire pump from the well.</p>
-
-  <p><strong>Jet pumps</strong> sit above ground and pull water up (shallow wells only). Less common in Florida because we have deeper wells, but easier to service.</p>
-
-  <h4>2. Pressure Tank</h4>
-  <p>Stores water under pressure so the pump doesn't need to run constantly. When you open a valve, pressurized water flows out. When pressure drops, the pump activates to refill the tank.</p>
-
-  <h4>3. Check Valves and Backflow Prevention</h4>
-  <p>Prevent water from flowing backward and protect the well pump from damage. Required by Florida code.</p>
-
-  <h3>Signs Your Well Pump Needs Service</h3>
-
-  <h4>Loss of Water Pressure</h4>
-  <p>If your system suddenly has weak pressure in all zones, the well pump may be failing. This is different from low pressure in one zone (which usually indicates a line problem).</p>
-
-  <h4>Pump Won't Start</h4>
-  <p>The pump doesn't activate when pressure drops. Usually indicates electrical failure, but can also mean mechanical pump problems.</p>
-
-  <h4>Pump Runs Constantly</h4>
-  <p>If the pump never stops running, the pressure tank may have failed, or there may be a leak in the system causing continuous pressure loss.</p>
-
-  <h4>Spurting or Reduced Flow</h4>
-  <p>The pump may be cavitating (losing prime) due to a leak in the inlet line or a failing check valve.</p>
-
-  <h4>Unusual Noise</h4>
-  <p>Grinding, squealing, or rattling sounds indicate mechanical failure inside the pump. Don't ignore these—they signal imminent failure.</p>
-
-  <h4>Visible Water Leaks Near the Well Head</h4>
-  <p>Leaks indicate problems with check valves, fittings, or the pressure tank. Can waste water and damage the well pump.</p>
-
-  <h3>When to Repair vs. Replace</h3>
-
-  <h4>Repair Makes Sense If:</h4>
-  <ul>
-    <li>Pump is less than 10 years old</li>
-    <li>Problem is a simple component (pressure switch, capacitor, check valve)</li>
-    <li>Repair cost is less than 50% of replacement cost</li>
-  </ul>
-
-  <h4>Replace Makes Sense If:</h4>
-  <ul>
-    <li>Pump is over 15 years old</li>
-    <li>Internal pump damage (bearings, seals) requiring complete rebuild</li>
-    <li>Repair cost exceeds 50% of new pump cost</li>
-    <li>Pump has failed multiple times (sign of age/wear)</li>
-  </ul>
-
-  <h3>Well Pump Repair Services</h3>
-
-  <h4>Electrical Repairs</h4>
-  <p>Problems with capacitors, wiring, or control switches often make it seem like the pump is broken when it's really just an electrical component. These are usually inexpensive fixes.</p>
-
-  <h4>Pressure Tank Service</h4>
-  <p>Pressure tanks wear out and lose their ability to hold pressure. Often replacing the tank solves "pump won't turn off" problems.</p>
-
-  <h4>Check Valve Replacement</h4>
-  <p>Failed check valves allow water to flow backward, causing pressure loss and pump cycling issues. Replacement is straightforward and inexpensive.</p>
-
-  <h4>Line Repair</h4>
-  <p>Leaks in the inlet line (from well to pump) or discharge line (from pump to tank) reduce pump efficiency or prevent proper function. We locate and repair leaks.</p>
-
-  <h4>Complete Pump Replacement</h4>
-  <p>When internal damage makes repair uneconomical, we pull the old pump and install a new one, including pressure tank and check valve service.</p>
-
-  <h3>Well Pump Maintenance (Prevent Problems)</h3>
-
-  <h4>Annual Inspection</h4>
-  <p>We check pressure, water quality, electrical components, and listen for unusual sounds. Early detection prevents costly failures.</p>
-
-  <h4>Pressure Tank Service</h4>
-  <p>Every 2-3 years, pressure tanks should be recharged (the air bladder loses pressure over time). This is a simple, inexpensive maintenance task.</p>
-
-  <h4>Sediment and Mineral Removal</h4>
-  <p>Tampa's well water can be high in minerals and sediment. We can install filters to protect the pump and improve water quality.</p>
-
-  <h4>Winterization (November)</h4>
-  <p>Even rare freezes can damage well pumps. Pre-freeze inspection ensures the system is protected.</p>
-
-  <h3>Well Pump Lifespan and Replacement Cost</h4>
-
-  <p><strong>Expected Lifespan:</strong> 15-25 years with proper maintenance. Submersible pumps in Florida wells often last 20+ years if water quality is good.</p>
-
-  <p><strong>Replacement Cost:</strong> $2,500-$6,000 including pump, tank, installation, and testing. Price varies based on:</p>
-
-  <ul>
-    <li>Well depth (deeper wells need stronger, more expensive pumps)</li>
-    <li>Flow requirements (larger systems need larger pumps)</li>
-    <li>Pressure tank size</li>
-    <li>Difficulty of access</li>
-  </ul>
-
-  <h3>Well Water Quality and Pump Protection</h3>
-
-  <p>Tampa Bay well water often contains iron, manganese, and sediment that can damage pumps and sprinkler heads. If you have well-drawn water:</p>
-
-  <ul>
-    <li><strong>Install a filter:</strong> Protects pump and downstream equipment</li>
-    <li><strong>Monitor water quality:</strong> High iron can clog sprinkler heads and valves</li>
-    <li><strong>Treat water if needed:</strong> For drinking/household use, but irrigation water filtration alone may suffice</li>
-  </ul>
-
-  <h3>Questions About Well Pumps</h3>
-
-  <h4>How often should well pumps be serviced?</h4>
-  <p>Annual inspections are ideal. If the pump is performing well, basic maintenance every 2-3 years (pressure tank recharge) is usually sufficient.</p>
-
-  <h4>Can I repair a well pump myself?</h4>
-  <p>Submersible well pumps require special tools and expertise. DIY repair is not recommended. Professional service is safer and more reliable.</p>
-
-  <h4>What's the difference between well pump repair and submersible pump repair?</h4>
-  <p>Submersible pump repair is specialized—the pump must be pulled from the well, which requires specific equipment. We handle this expertise.</p>
-
-  <h4>How do I know if my well water is suitable for irrigation?</h4>
-  <p>We can test your water quality and recommend filtration if needed. Most Tampa well water works fine for irrigation with proper filtration.</p>
-
-  <div class="post-cta">
-    <strong>Well Pump Problems? We Specialize in Service</strong>
-    <p>From routine maintenance to emergency repairs and complete replacement, we keep your well pump system running reliably year-round.</p>
-    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Well Pump Service</a>
-  </div>
-
-  <p><strong>Or call us for emergency service:</strong> <a href="tel:8134998485">(813) 499-8485</a> — We provide same-day well pump repair for most Tampa Bay properties.</p>
-</div>
-
+<!-- ARTICLE CONTENT MOVED TO INDIVIDUAL SUBPAGES -->
 <!-- REVIEWS -->
 <section class="reviews-section" id="reviews">
   <div class="container">
@@ -2174,19 +1148,6 @@
     e.target.reset();
   }
 
-  // Blog modal
-  function openPost(id) {
-    const content = document.getElementById(id).innerHTML;
-    document.getElementById('blog-modal-content').innerHTML = content;
-    document.getElementById('blog-overlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closePost(e, force) {
-    if (force || (e && e.target.id === 'blog-overlay')) {
-      document.getElementById('blog-overlay').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
 </script>
 </body>
 </html>
