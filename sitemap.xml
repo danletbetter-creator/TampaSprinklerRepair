@@ -3,7 +3,7 @@
 
   <!-- =============================================
        Water Oak Irrigation — sitemap.xml
-       Updated: 2026-03-16
+       Updated: 2026-04-04
        Deploy in root folder alongside index.html
        ============================================= -->
 
@@ -76,6 +76,13 @@
   <url>
     <loc>https://www.wateroakirrigation.com/irrigation-maintenance-davis-island</loc>
     <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.wateroakirrigation.com/westchase-florida</loc>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
