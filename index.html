@@ -245,6 +245,60 @@
   }
   </script>
 
+  <!-- WebSite Schema with SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Water Oak Irrigation",
+    "url": "https://www.wateroakirrigation.com",
+    "description": "Licensed irrigation contractor serving Tampa Bay. Sprinkler repair, drainage solutions, smart controllers & well pump service.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.wateroakirrigation.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- LocalBusiness with Geo Coordinates -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@id": "https://www.wateroakirrigation.com/#business",
+    "name": "Water Oak Irrigation",
+    "image": "https://www.wateroakirrigation.com/logo.jpg",
+    "telephone": "(813) 499-8485",
+    "email": "dan@wateroakirrigation.com",
+    "url": "https://www.wateroakirrigation.com",
+    "hasMap": "https://maps.google.com/?q=Water+Oak+Irrigation+Temple+Terrace+FL",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Temple Terrace",
+      "addressRegion": "FL",
+      "postalCode": "33617",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.0394,
+      "longitude": -82.3773
+    },
+    "foundingDate": "2015",
+    "founder": {
+      "@type": "Person",
+      "name": "Dan Letbetter"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "33",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
