@@ -215,6 +215,13 @@
     .video-header h2 { margin-bottom: 12px; }
     .video-wrapper { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; box-shadow: 0 8px 32px rgba(26,46,107,0.15); }
     .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 14px; }
+    .gallery-section { background: var(--cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 48px; }
+    .gallery-item { border-radius: 14px; overflow: hidden; box-shadow: 0 6px 24px rgba(26,46,107,0.12); transition: transform 0.3s, box-shadow 0.3s; }
+    .gallery-item:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(26,46,107,0.18); }
+    .gallery-item img { width: 100%; height: 340px; object-fit: cover; display: block; }
+    .gallery-caption { background: var(--white); padding: 16px 20px; font-size: 14px; font-weight: 500; color: var(--gray); border-top: 3px solid var(--green-bright); }
+    @media (max-width: 700px) { .gallery-grid { grid-template-columns: 1fr; } .gallery-item img { height: 240px; } }
     .trust-bar { background: var(--dark); padding: 18px 40px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; }
     .trust-item span:first-child { color: var(--green-light); font-size: 17px; }
@@ -308,6 +315,24 @@
       </div>
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/vtL4mf-rnXE?rel=0" title="Drainage Solutions Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section reveal">
+  <div class="container">
+    <span class="section-label">Our Work</span>
+    <h2>Drainage Installations in Tampa Bay</h2>
+    <p class="section-intro">Real results from real customers — see our team in action installing professional drainage systems across Central Florida.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="French-Drain-installation.jpeg" alt="French drain installation crew carrying drainage pipe in Tampa Bay backyard" loading="lazy" />
+        <div class="gallery-caption">French drain installation — our crew carrying perforated drainage pipe to the job site</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Central-Florida-drainage-experts.png" alt="Happy customer after drainage installation in Central Florida" loading="lazy" />
+        <div class="gallery-caption">Another satisfied customer — celebrating a dry yard after professional drainage installation</div>
       </div>
     </div>
   </div>
