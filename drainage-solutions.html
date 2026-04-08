@@ -171,7 +171,8 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
     .hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #1a5c32; padding-top: 76px; }
-    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(45,160,82,0.4) 0%, transparent 70%), linear-gradient(135deg, #0c1840 0%, #1a2e6b 55%, #0e2050 100%); }
+    .hero-bg { position: absolute; inset: 0; background-image: url('French-Drain-installation.jpeg'); background-size: cover; background-position: center; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(45,160,82,0.35) 0%, transparent 70%), linear-gradient(135deg, rgba(12,24,64,0.88) 0%, rgba(26,46,107,0.82) 55%, rgba(14,32,80,0.88) 100%); }
     .hero-content { position: relative; z-index: 2; text-align: center; padding: 80px 40px; max-width: 900px; }
     h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 60px); font-weight: 900; line-height: 1.1; color: white; margin-bottom: 20px; }
     .service-subtitle { font-size: 18px; line-height: 1.7; color: var(--green-light); margin-bottom: 28px; font-weight: 500; }
