@@ -173,11 +173,12 @@
     .hero-bg {
       position: absolute; inset: 0;
       background:
-        linear-gradient(135deg, rgba(12,24,64,0.82) 0%, rgba(26,46,107,0.68) 55%, rgba(14,32,80,0.86) 100%),
+        linear-gradient(90deg, rgba(8,18,48,0.92) 0%, rgba(12,24,64,0.78) 45%, rgba(14,32,80,0.55) 100%),
+        linear-gradient(180deg, rgba(10,20,52,0.30) 0%, rgba(10,20,52,0.65) 100%),
         url('golf-course-sprinkler-fairway.jpg') center/cover no-repeat;
     }
     .hero-content {
-      position: relative; z-index: 2; text-align: center;
+      position: relative; z-index: 2; text-align: left;
       padding: 80px 40px;
       max-width: 900px;
     }
@@ -185,12 +186,14 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(40px, 5vw, 60px); font-weight: 900; line-height: 1.1;
       color: white; margin-bottom: 20px;
+      text-shadow: 0 2px 18px rgba(6,14,38,0.7);
     }
     .service-subtitle {
-      font-size: 18px; line-height: 1.7; color: var(--green-light);
-      margin-bottom: 28px; font-weight: 500;
+      font-size: 18px; line-height: 1.7; color: #d7f3e0;
+      margin-bottom: 28px; font-weight: 500; max-width: 640px;
+      text-shadow: 0 1px 10px rgba(6,14,38,0.6);
     }
-    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--green-bright); color: white; text-decoration: none;
@@ -248,7 +251,7 @@
     .serve-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 52px; }
     .serve-card {
       background: white; padding: 28px 22px; border-radius: 12px;
-      border: 1px solid var(--gray-light); text-align: center; transition: all 0.25s;
+      border: 1px solid var(--gray-light); text-align: left; transition: all 0.25s;
     }
     .serve-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(26,46,107,0.1); border-color: var(--blue-light); }
     .serve-icon { font-size: 34px; margin-bottom: 14px; display: block; }
@@ -259,13 +262,13 @@
     .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; }
     .process-step {
       background: var(--cream); padding: 28px; border-radius: 12px; border: 1px solid var(--gray-light);
-      text-align: center; position: relative;
+      text-align: left; position: relative;
     }
     .step-number {
       display: flex; align-items: center; justify-content: center;
       width: 48px; height: 48px; background: var(--green-bright);
       color: white; font-family: 'Playfair Display', serif; font-size: 24px;
-      font-weight: 700; border-radius: 50%; margin: 0 auto 16px;
+      font-weight: 700; border-radius: 50%; margin: 0 0 16px;
     }
     .process-step h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
     .process-step p { font-size: 13px; line-height: 1.6; color: var(--gray); }
@@ -292,18 +295,25 @@
       padding: 26px 20px 16px; color: white; font-size: 14px; font-weight: 600;
       background: linear-gradient(transparent, rgba(14,26,58,0.88));
     }
+    .video-row { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; margin-top: 52px; }
+    .video-wrap {
+      flex: 1 1 300px; max-width: 360px; border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--gray-light); box-shadow: 0 8px 26px rgba(26,46,107,0.08);
+    }
+    .video-frame { position: relative; width: 100%; padding-bottom: 177.78%; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     /* ── CTA ── */
     .cta-section {
-      background: var(--blue-deep); color: white; text-align: center;
+      background: var(--blue-deep); color: white; text-align: left;
       padding: 80px 40px;
     }
     .cta-section h2 { color: white; margin-bottom: 16px; }
-    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; max-width: 600px; }
+    .cta-actions { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
     /* ── TRUST BAR ── */
     .trust-bar {
       background: var(--dark); padding: 18px 40px;
-      display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;
+      display: flex; justify-content: flex-start; gap: 44px; flex-wrap: wrap;
     }
     .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; }
     .trust-item span:first-child { color: var(--green-light); font-size: 17px; }
@@ -455,23 +465,17 @@
     <span class="section-label">Our Work</span>
     <h2>Golf Course &amp; Large-Property Irrigation</h2>
     <p class="section-intro">From championship golf courses to sprawling HOA grounds, we install, tune, and maintain the high-output rotor and spray systems that keep large Tampa Bay landscapes green from edge to edge.</p>
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="golf-course-irrigation-overview.jpg" alt="Multiple irrigation sprinklers running across a lush golf course fairway" width="1408" height="768" loading="lazy" />
-        <figcaption class="gallery-caption">Full-coverage fairway irrigation</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="golf-course-rotor-green.jpg" alt="Gear-drive rotor sprinkler watering the edge of a golf putting green at dawn" width="1400" height="764" loading="lazy" />
-        <figcaption class="gallery-caption">Precision rotor heads on greens</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="golf-course-irrigation-technician.jpg" alt="Irrigation technician adjusting a sprinkler head on a golf course fairway" width="1400" height="764" loading="lazy" />
-        <figcaption class="gallery-caption">Expert service &amp; head adjustments</figcaption>
-      </figure>
-      <figure class="gallery-item">
-        <img src="golf-course-irrigation-dusk.jpg" alt="Golf course sprinklers running at dusk under a colorful sky" width="1408" height="768" loading="lazy" />
-        <figcaption class="gallery-caption">Scheduled overnight watering</figcaption>
-      </figure>
+    <div class="video-row">
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/rdCpHhQJlS8" title="Commercial &amp; large-property irrigation" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="video-wrap">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/QpjYV8fDKmc" title="Commercial irrigation &amp; well pump work" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
