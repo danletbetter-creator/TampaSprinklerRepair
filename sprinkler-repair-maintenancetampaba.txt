@@ -1,0 +1,8 @@
+/sprinkler-repair-maintenance/tampabay    /sprinkler-repair.html    301
+/sprinkler-repair-maintenance             /sprinkler-repair.html    301
+/sprinkler-repair-maintenance/expert-sod-installation    /sod-installation-tampa.html    301
+/frequent-questions-florida               /#faq    301
+/sprinkler-repair-maintenance/what-to-do-post-freeze    /post-freeze-irrigation-wesley-chapel.html    301
+/wesley-chapel-sprinkler-repair           /westchase-florida.html    301
+/mcp                                      /    301
+/sse                                      /    301
