@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drainage Solutions | Water Oak Irrigation</title>
+  <meta name="description" content="Professional drainage solutions for Tampa Bay. French drains, NDS catch basins, channel drains designed for Florida's tropical rains." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Drainage Solutions",
+    "description": "Professional drainage solutions for Tampa Bay including French drains, NDS catch basins, channel drains, sump pumps, and yard regrading engineered for Florida's tropical rains and flooding prevention.",
+    "url": "https://wateroakirrigation.com/drainage-solutions.html",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Water Oak Irrigation",
+      "telephone": "(813) 499-8485",
+      "email": "Dan@wateroakirrigation.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tampa",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": ["Tampa", "Wesley Chapel", "Brandon", "St. Petersburg", "Carrollwood", "Lake Magdalene", "Odessa", "Pinellas County"],
+    "serviceType": "Drainage Installation",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "150"
+    },
+    "priceRange": "$500-$6000",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Drainage Solutions",
+      "itemListElement": [
+        {"@type": "Offer", "name": "French Drain Installation", "price": "1500-3000", "priceCurrency": "USD"},
+        {"@type": "Offer", "name": "Catch Basin Installation", "price": "800-1500", "priceCurrency": "USD"},
+        {"@type": "Offer", "name": "Channel Drain Installation", "price": "500-1500", "priceCurrency": "USD"},
+        {"@type": "Offer", "name": "Sump Pump System Installation", "price": "2500-4500", "priceCurrency": "USD"},
+        {"@type": "Offer", "name": "Yard Regrading and Swales", "price": "2000-5000", "priceCurrency": "USD"}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep: #1a2e6b;
+      --blue-mid: #2341a0;
+      --blue-bright: #2f55c8;
+      --blue-light: #6b8fe0;
+      --green-deep: #1a5c32;
+      --green-mid: #237a44;
+      --green-bright: #2da052;
+      --green-light: #5dc47a;
+      --gold: #f0c040;
+      --cream: #f4f7ff;
+      --white: #ffffff;
+      --dark: #0e1a3a;
+      --gray: #5a6a8a;
+      --gray-light: #e2e8f8;
+      --shadow-sm: 0 2px 8px rgba(26,46,107,0.08);
+      --shadow-md: 0 8px 24px rgba(26,46,107,0.12);
+      --shadow-lg: 0 20px 56px rgba(26,46,107,0.18);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+
+    /* HEADER */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 40px; height: 76px; display: flex; align-items: center; justify-content: space-between; background: rgba(26,46,107,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(107,143,224,0.2); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--white); letter-spacing: 0.02em; }
+    .logo-text span:last-child { font-size: 10px; color: var(--green-light); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s; }
+    nav a:hover { color: var(--green-light); }
+    .nav-phone { color: var(--gold) !important; font-weight: 700 !important; }
+    .btn-header { background: var(--green-bright); color: white !important; padding: 9px 20px; border-radius: 5px; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.2s !important; }
+    .btn-header:hover { background: var(--green-deep) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+
+    /* HERO */
+    .hero { min-height: 78vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 76px; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 60% 50%, rgba(45,160,82,0.32) 0%, transparent 70%), linear-gradient(155deg, #080f28 0%, #1a2e6b 55%, #0a2018 100%); }
+    .rain-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .drop { position: absolute; top: -120px; width: 1.5px; border-radius: 2px; background: linear-gradient(to bottom, transparent, rgba(107,180,224,0.4)); animation: fall linear infinite; }
+    @keyframes fall { to { transform: translateY(110vh); } }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 72px 40px 56px; max-width: 940px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; font-weight: 600; margin-bottom: 24px; transition: color 0.2s; }
+    .back-link:hover { color: var(--green-light); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(93,196,122,0.14); border: 1px solid rgba(93,196,122,0.32); color: var(--green-light); font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 18px; border-radius: 40px; margin-bottom: 26px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(38px, 5.5vw, 66px); font-weight: 900; line-height: 1.08; color: white; margin-bottom: 22px; }
+    h1 em { color: var(--green-light); font-style: normal; }
+    .service-subtitle { font-size: 18px; line-height: 1.72; color: rgba(255,255,255,0.72); margin-bottom: 38px; font-weight: 400; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--green-bright); color: white; text-decoration: none; padding: 16px 32px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 6px; transition: all 0.25s; border: 2px solid transparent; }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(45,160,82,0.45); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; text-decoration: none; padding: 16px 32px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 6px; border: 2px solid rgba(255,255,255,0.28); transition: all 0.25s; }
+    .btn-secondary:hover { border-color: var(--green-light); color: var(--green-light); }
+    .hero-stats { display: flex; justify-content: center; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); }
+    .hero-stat { padding: 20px 40px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: var(--gold); line-height: 1; display: block; margin-bottom: 5px; }
+    .hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--dark); padding: 16px 40px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.58); font-size: 13px; font-weight: 500; }
+    .trust-item .ti { color: var(--green-light); font-size: 16px; }
+
+    /* SHARED SECTION STYLES */
+    section { padding: 96px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 12px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 46px); font-weight: 900; line-height: 1.1; color: var(--dark); margin-bottom: 16px; }
+    .section-intro { font-size: 16px; line-height: 1.75; color: var(--gray); max-width: 640px; font-weight: 300; }
+    .section-head { margin-bottom: 52px; }
+
+    /* PROBLEM SECTION */
+    .problem-section { background: var(--white); }
+    .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .problem-card { padding: 28px; background: #fff5f5; border-radius: 12px; border: 1px solid #fed7d7; display: flex; gap: 16px; align-items: flex-start; transition: all 0.3s; }
+    .problem-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(229,62,62,0.1); }
+    .prob-icon { font-size: 30px; flex-shrink: 0; margin-top: 2px; }
+    .problem-card h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; margin-bottom: 7px; color: #c53030; }
+    .problem-card p { font-size: 13px; line-height: 1.65; color: var(--gray); }
+    .problem-cta { margin-top: 44px; text-align: center; }
+    .problem-cta p { font-size: 16px; color: var(--gray); margin-bottom: 20px; }
+
+    /* SERVICES SECTION */
+    .services-section { background: var(--cream); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    .service-card { background: var(--white); border-radius: 14px; border: 1px solid var(--gray-light); overflow: hidden; transition: all 0.35s; display: flex; flex-direction: column; }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .service-card-top { padding: 32px 28px 24px; flex: 1; }
+    .svc-icon { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+    .ic-blue { background: rgba(47,85,200,0.1); }
+    .ic-green { background: rgba(45,160,82,0.1); }
+    .ic-gold { background: rgba(240,192,64,0.12); }
+    .service-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .service-card p { font-size: 14px; line-height: 1.72; color: var(--gray); }
+    .service-card-bottom { padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--gray-light); }
+    .svc-price { font-size: 13px; font-weight: 700; color: var(--green-bright); }
+    .svc-price span { display: block; font-size: 11px; color: var(--gray); font-weight: 400; margin-bottom: 2px; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border: 2px solid var(--green-bright); color: var(--green-bright); text-decoration: none; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.2s; white-space: nowrap; }
+    .btn-outline:hover { background: var(--green-bright); color: white; }
+    .card-dark { background: linear-gradient(135deg, #1a2e6b, #2341a0) !important; border-color: transparent !important; }
+    .card-dark .service-card-top { border-bottom: none; }
+    .card-dark h3 { color: white; }
+    .card-dark p { color: rgba(255,255,255,0.68); }
+    .card-dark .service-card-bottom { border-top-color: rgba(255,255,255,0.1); }
+
+    /* STATS SECTION */
+    .stats-section { background: var(--blue-deep); padding: 72px 40px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 900px; margin: 0 auto; }
+    .stat-item { text-align: center; padding: 36px 24px; border-right: 1px solid rgba(255,255,255,0.1); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 54px; font-weight: 900; color: var(--gold); line-height: 1; display: block; margin-bottom: 10px; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.58); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+
+    /* VIDEO SECTION */
+    .video-section { background: var(--white); }
+    .video-inner { max-width: 900px; margin: 0 auto; }
+    .video-header { margin-bottom: 36px; }
+    .video-wrapper { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 14px 44px rgba(26,46,107,0.18); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px; }
+
+    /* PROCESS SECTION */
+    .process-section { background: var(--cream); }
+    .process-track { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .process-track::before { content: ''; position: absolute; top: 35px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 2px; background: linear-gradient(to right, var(--green-bright), var(--blue-bright)); z-index: 0; }
+    .process-step { background: white; padding: 32px 22px 28px; border-radius: 14px; border: 1px solid var(--gray-light); text-align: center; position: relative; z-index: 1; transition: all 0.3s; }
+    .process-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .step-num { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: linear-gradient(135deg, var(--green-bright), var(--green-deep)); color: white; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; border-radius: 50%; margin: 0 auto 20px; box-shadow: 0 4px 16px rgba(45,160,82,0.38); }
+    .process-step h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .process-step p { font-size: 13px; line-height: 1.65; color: var(--gray); }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--white); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .testi-card { padding: 32px; background: var(--cream); border-radius: 14px; border: 1px solid var(--gray-light); transition: all 0.3s; position: relative; overflow: hidden; }
+    .testi-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .quote-bg { position: absolute; top: 16px; right: 22px; font-family: 'Playfair Display', serif; font-size: 80px; line-height: 1; color: rgba(26,46,107,0.06); font-weight: 900; pointer-events: none; }
+    .testi-stars { color: var(--gold); font-size: 17px; letter-spacing: 2px; margin-bottom: 16px; display: block; }
+    .testi-text { font-size: 14px; line-height: 1.78; color: var(--gray); margin-bottom: 24px; font-style: italic; position: relative; }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .author-av { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: white; flex-shrink: 0; }
+    .av-blue { background: linear-gradient(135deg, #2f55c8, #1a2e6b); }
+    .av-green { background: linear-gradient(135deg, #2da052, #1a5c32); }
+    .av-gold { background: linear-gradient(135deg, #d4900a, #f0c040); color: #0e1a3a; }
+    .author-info strong { display: block; font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 2px; }
+    .author-info span { font-size: 12px; color: var(--gray); }
+
+    /* FAQ */
+    .faq-section { background: var(--cream); }
+    .faq-section .section-head { text-align: center; }
+    .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { background: var(--white); border-radius: 12px; border: 1px solid var(--gray-light); overflow: hidden; transition: box-shadow 0.3s; }
+    .faq-item.open { box-shadow: var(--shadow-sm); }
+    .faq-btn { width: 100%; padding: 22px 26px; text-align: left; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .faq-btn h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--dark); text-align: left; line-height: 1.4; }
+    .faq-chevron { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--cream); border: 1px solid var(--gray-light); display: flex; align-items: center; justify-content: center; transition: all 0.3s; font-size: 12px; color: var(--green-bright); }
+    .faq-item.open .faq-chevron { background: var(--green-bright); color: white; border-color: var(--green-bright); transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.38s ease; }
+    .faq-inner { padding: 0 26px 22px; font-size: 14px; line-height: 1.78; color: var(--gray); border-top: 1px solid var(--gray-light); padding-top: 18px; }
+
+    /* CTA */
+    .cta-section { background: linear-gradient(140deg, #080f28 0%, #1a2e6b 55%, #0a2018 100%); color: white; text-align: center; padding: 100px 40px; position: relative; overflow: hidden; }
+    .cta-section::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(45,160,82,0.18) 0%, transparent 65%); pointer-events: none; }
+    .cta-section h2 { color: white; margin-bottom: 16px; position: relative; }
+    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.68); margin-bottom: 40px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.65; position: relative; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; position: relative; }
+    .guarantee-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 40px; padding: 13px 26px; font-size: 14px; color: rgba(255,255,255,0.68); font-weight: 500; position: relative; }
+    .guarantee-badge strong { color: var(--gold); }
+
+    /* FOOTER */
+    footer { background: var(--dark); padding: 64px 40px 32px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: white; }
+    .footer-brand p { font-size: 13px; line-height: 1.72; color: rgba(255,255,255,0.38); max-width: 260px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-bottom: 18px; }
+    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.52); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--green-light); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.26); }
+
+    /* MOBILE STICKY */
+    .mobile-sticky { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--dark); border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 16px; gap: 10px; }
+    .mobile-sticky a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 6px; text-decoration: none; transition: all 0.2s; }
+    .sticky-call { background: var(--green-bright); color: white; }
+    .sticky-call:hover { background: var(--green-deep); }
+    .sticky-book { background: rgba(255,255,255,0.07); color: white; border: 1px solid rgba(255,255,255,0.18); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 76px; left: 0; right: 0; background: var(--blue-deep); padding: 24px 20px; gap: 18px; border-top: 1px solid rgba(255,255,255,0.1); z-index: 99; }
+      .hamburger { display: flex; }
+      section { padding: 64px 20px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+      .stat-item:last-child { border-bottom: none; }
+      .process-track { grid-template-columns: repeat(2, 1fr); }
+      .process-track::before { display: none; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .trust-bar { gap: 16px; padding: 14px 20px; }
+      .mobile-sticky { display: flex; }
+      body { padding-bottom: 70px; }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 34px; }
+      .hero-stat { padding: 14px 18px; }
+      .hero-stat-num { font-size: 24px; }
+      .process-track { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); }
+      .hero-stat { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .hero-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1) !important; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">
+    <div class="logo-text">
+      <span>Water Oak Irrigation</span>
+      <span>Tampa Bay's Trusted Experts</span>
+    </div>
+  </a>
+  <nav id="main-nav">
+    <a href="/#services">Services</a>
+    <a href="/#areas">Service Areas</a>
+    <a href="/#contact">Contact</a>
+    <a href="tel:8134998485" class="nav-phone">&#9742; (813) 499-8485</a>
+    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-header" target="_blank" rel="noopener">Book Now</a>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="rain-wrap" id="rain"></div>
+  <div class="hero-content">
+    <a href="/#services" class="back-link">&#8592; Back to Services</a>
+    <div class="hero-badge">&#11088; Tampa Bay's #1 Rated Drainage Company</div>
+    <h1>Stop the Flooding.<br><em>Protect Your Property.</em></h1>
+    <p class="service-subtitle">Custom French drains, catch basins, and channel drains engineered for Florida's heavy rains — installed in days, not weeks.</p>
+    <div class="hero-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Get Free Drainage Analysis</a>
+      <a href="tel:8134998485" class="btn-secondary">&#9742; Call (813) 499-8485</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">500+</span>
+        <span class="hero-stat-label">Systems Installed</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">15+</span>
+        <span class="hero-stat-label">Years Experience</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">5&#9733;</span>
+        <span class="hero-stat-label">Average Rating</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">Free</span>
+        <span class="hero-stat-label">On-Site Estimates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="ti">&#128737;</span> Licensed &amp; Insured</div>
+  <div class="trust-item"><span class="ti">&#10003;</span> Permit Management Included</div>
+  <div class="trust-item"><span class="ti">&#9889;</span> Same-Week Estimates</div>
+  <div class="trust-item"><span class="ti">&#127783;</span> Built for Florida Rains</div>
+  <div class="trust-item"><span class="ti">&#128175;</span> Satisfaction Guaranteed</div>
+  <div class="trust-item"><a href="https://www.google.com/maps/place/Water+Oak+Irrigation/@28.0506559,-82.5741433,10z/data=!3m1!4b1!4m6!3m5!1s0x88c2c0c595bb8bd5:0x17e55d4e7108a5da!8m2!3d28.050445!4d-82.2438025!16s%2Fg%2F11vx1gt17s?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.58); text-decoration:none; display:flex; align-items:center; gap:9px;"><span class="ti">&#11088;</span> See Us on Google</a></div>
+</div>
+
+<!-- PROBLEM SECTION -->
+<section class="problem-section reveal">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Sound Familiar?</span>
+      <h2>Signs You Have a Drainage Problem</h2>
+      <p class="section-intro">These are the warning signs Tampa Bay homeowners can't afford to ignore. Every rainstorm makes them worse.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="prob-icon">&#128167;</span>
+        <div>
+          <h3>Standing Water After Rain</h3>
+          <p>Puddles that don't drain within 24 hours are a clear sign water has nowhere to go — and a breeding ground for mosquitoes.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <span class="prob-icon">&#127968;</span>
+        <div>
+          <h3>Water Near Your Foundation</h3>
+          <p>Pooling near your home's base puts pressure on concrete, causes cracks, and can lead to costly structural repairs.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <span class="prob-icon">&#129502;</span>
+        <div>
+          <h3>Muddy, Unusable Yard</h3>
+          <p>If your backyard turns into a swamp after every storm, you're losing valuable outdoor living space every rainy season.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <span class="prob-icon">&#127807;</span>
+        <div>
+          <h3>Dead or Patchy Grass</h3>
+          <p>Waterlogged soil suffocates grass roots. If your lawn looks like a patchwork quilt, poor drainage is likely the culprit.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <span class="prob-icon">&#9968;</span>
+        <div>
+          <h3>Soil Erosion</h3>
+          <p>Topsoil washing away after every rain event strips nutrients, exposes roots, and gradually destabilizes your property.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <span class="prob-icon">&#129714;</span>
+        <div>
+          <h3>Mosquito Breeding Grounds</h3>
+          <p>In Florida, standing water is a mosquito paradise. Eliminate it at the source with a professionally designed drainage system.</p>
+        </div>
+      </div>
+    </div>
+    <div class="problem-cta">
+      <p>If any of these sound familiar, we can help — starting with a <strong>free on-site analysis.</strong></p>
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Free Analysis</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services-section reveal">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Our Solutions</span>
+      <h2>Drainage Systems We Install</h2>
+      <p class="section-intro">Every property is different. We match the right system to your specific water flow patterns and soil conditions.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="svc-icon ic-blue">&#128167;</div>
+          <h3>French Drains</h3>
+          <p>The most popular solution for waterlogged yards. A perforated pipe in a gravel-filled trench captures subsurface water and redirects it safely away from your property.</p>
+        </div>
+        <div class="service-card-bottom">
+          <div class="svc-price"><span>Starting at</span>$1,500</div>
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-outline" target="_blank" rel="noopener">Get Quote &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="svc-icon ic-green">&#129704;</div>
+          <h3>NDS Catch Basins</h3>
+          <p>Surface-level collection points that capture runoff from low spots and concentrated flow areas. Perfect for corners of the yard where water naturally pools.</p>
+        </div>
+        <div class="service-card-bottom">
+          <div class="svc-price"><span>Starting at</span>$800</div>
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-outline" target="_blank" rel="noopener">Get Quote &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="svc-icon ic-blue">&#8594;</div>
+          <h3>Channel Drains</h3>
+          <p>Linear drains installed across driveways, patios, and pool decks to intercept and redirect surface water before it reaches your home or creates hazardous puddles.</p>
+        </div>
+        <div class="service-card-bottom">
+          <div class="svc-price"><span>Starting at</span>$500</div>
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-outline" target="_blank" rel="noopener">Get Quote &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="svc-icon ic-gold">&#9889;</div>
+          <h3>Sump Pump Systems</h3>
+          <p>For severe flooding situations, a sump pump actively removes water from problem areas. We install complete systems including pit, pump, discharge line, and backup power options.</p>
+        </div>
+        <div class="service-card-bottom">
+          <div class="svc-price"><span>Starting at</span>$2,500</div>
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-outline" target="_blank" rel="noopener">Get Quote &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="svc-icon ic-green">&#9968;</div>
+          <h3>Yard Regrading &amp; Swales</h3>
+          <p>Sometimes the best solution is reshaping the land itself. We regrade yards and build swales to naturally direct water flow away from structures and toward proper drainage outlets.</p>
+        </div>
+        <div class="service-card-bottom">
+          <div class="svc-price"><span>Starting at</span>$2,000</div>
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-outline" target="_blank" rel="noopener">Get Quote &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card card-dark">
+        <div class="service-card-top">
+          <div class="svc-icon" style="background: rgba(255,255,255,0.1);">&#128269;</div>
+          <h3>Not Sure What You Need?</h3>
+          <p>No problem. Our experts will assess your property, diagnose the issue, and recommend the right solution — completely free, no obligation required.</p>
+        </div>
+        <div class="service-card-bottom">
+          <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener" style="width:100%; justify-content:center;">Book Free Site Visit</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num" data-target="500" data-suffix="+">0+</span>
+        <span class="stat-label">Systems Installed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="15" data-suffix="+">0+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="5" data-suffix="&#9733;">0&#9733;</span>
+        <span class="stat-label">Average Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="98" data-suffix="%">0%</span>
+        <span class="stat-label">Customer Satisfaction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section reveal">
+  <div class="container">
+    <div class="video-inner">
+      <div class="video-header">
+        <span class="section-label">See It In Action</span>
+        <h2>Watch a Real Drainage Install</h2>
+        <p class="section-intro">See how we transform a waterlogged yard into a dry, protected property with professional drainage installation.</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/vtL4mf-rnXE?rel=0" title="Drainage Solutions Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process-section reveal">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">How We Work</span>
+      <h2>From Call to Completion</h2>
+      <p class="section-intro">We handle every step so you don't have to. Most projects are completed within days of the initial assessment.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Site Analysis</h3>
+        <p>We evaluate water flow patterns, soil type, and topography to identify the root cause of your drainage problem.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Custom Design</h3>
+        <p>We design a system with precise slope, materials, and placement — engineered for your property's unique characteristics.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Expert Installation</h3>
+        <p>Our crew installs your drainage system cleanly and efficiently, with minimal disruption to your lawn and landscaping.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>Test &amp; Approve</h3>
+        <p>We verify the system performs under real rain conditions and ensure everything passes local inspection requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section reveal">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Real Customers</span>
+      <h2>What Tampa Bay Homeowners Say</h2>
+      <p class="section-intro">Don't take our word for it — here's what our customers experienced after we solved their drainage problems.</p>
+      <a href="https://www.google.com/maps/place/Water+Oak+Irrigation/@28.0506559,-82.5741433,10z/data=!3m1!4b1!4m6!3m5!1s0x88c2c0c595bb8bd5:0x17e55d4e7108a5da!8m2!3d28.050445!4d-82.2438025!16s%2Fg%2F11vx1gt17s?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--green-bright);font-weight:700;font-size:14px;text-decoration:none;">&#11088; See All Our Google Reviews &#8594;</a>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card">
+        <span class="quote-bg">&ldquo;</span>
+        <span class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="testi-text">"After every rain, my backyard was a lake. Water Oak came out, assessed the situation, and installed a French drain system in just 2 days. I can't believe how dry my yard stays now — even after those massive summer storms. Worth every penny."</p>
+        <div class="testi-author">
+          <div class="author-av av-blue">MR</div>
+          <div class="author-info">
+            <strong>Mike R.</strong>
+            <span>Tampa, FL &mdash; French Drain Install</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="quote-bg">&ldquo;</span>
+        <span class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="testi-text">"We had water pooling right next to our foundation after every storm — I was terrified about structural damage. The team was professional, thorough, and even spotted a secondary drainage issue we hadn't noticed. Couldn't be happier."</p>
+        <div class="testi-author">
+          <div class="author-av av-green">ST</div>
+          <div class="author-info">
+            <strong>Sarah T.</strong>
+            <span>Wesley Chapel, FL &mdash; Catch Basin System</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="quote-bg">&ldquo;</span>
+        <span class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="testi-text">"Called Monday, had an estimate Tuesday, and the work was done by Thursday. The channel drain they installed along my driveway stopped the flooding immediately. Fast, clean, professional — these guys know exactly what they're doing."</p>
+        <div class="testi-author">
+          <div class="author-av av-gold">JM</div>
+          <div class="author-info">
+            <strong>James M.</strong>
+            <span>Brandon, FL &mdash; Channel Drain Install</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section reveal">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Common Questions</span>
+      <h2>Drainage FAQs</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>What's the difference between French drains and catch basins?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">French drains handle subsurface water — they use a sloped gravel trench and perforated pipe to redirect water traveling underground. Catch basins handle surface water — they're collection points that grab runoff from the surface and channel it away. Many of our projects use both together for complete protection against Tampa Bay's heavy rainfall.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>How much do drainage systems cost?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">Costs vary based on the size of your property and the type of system required. A simple catch basin starts around $800, French drains typically run $1,500–$3,000, and complete multi-system installs can range from $3,000–$8,000+. We provide free, no-obligation on-site estimates so you'll know exactly what to expect before any work begins.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>How long does installation take?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">Most residential drainage projects are completed in 1–3 days depending on scope. A single catch basin or channel drain can often be done in one day. Larger French drain systems or full yard regrading may take 2–4 days. We'll give you a clear timeline before we start and work efficiently to minimize disruption to your daily routine.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>How long do drainage systems last?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">Professionally installed drainage systems can last 20–30 years or more with proper care. We use commercial-grade materials rated for Florida's demanding climate. We recommend a quick annual check to clear debris from drain openings and confirm flow isn't obstructed — which takes about 15 minutes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>Do you pull permits for drainage work?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">Yes — for larger drainage projects, permits are typically required by Hillsborough, Pinellas, and Pasco counties. We handle the entire permit process for you, including submission, inspections, and sign-off. You won't need to deal with the county office at all. Permit costs are included in your estimate upfront.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFAQ(this)">
+          <h3>Will drainage work damage my landscaping?</h3>
+          <div class="faq-chevron">&#9660;</div>
+        </button>
+        <div class="faq-answer">
+          <p class="faq-inner">We take great care to minimize landscape disruption. Our crews work around existing plants, trees, and hardscape features whenever possible. After installation, we restore the disturbed areas — replacing sod, raking, and cleaning up completely. Most customers are surprised at how clean the site looks when we're done.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready for a Permanently Dry Yard?</h2>
+    <p class="cta-subtitle">Free on-site analysis. No pushy sales tactics. Just honest solutions from Tampa Bay's most trusted drainage team.</p>
+    <div class="cta-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Free Consultation</a>
+      <a href="tel:8134998485" class="btn-secondary">&#9742; Call (813) 499-8485</a>
+    </div>
+    <div class="guarantee-badge">
+      &#10003; <strong>100% Satisfaction Guaranteed</strong> &mdash; If it doesn't drain right, we fix it. Period.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span>Water Oak Irrigation</span>
+      </a>
+      <p>Providing professional irrigation and drainage solutions for the Tampa Bay community since 2009.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#areas">Service Areas</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="drainage-solutions.html">Drainage Solutions</a>
+      <a href="irrigation-design.html">Irrigation Design</a>
+      <a href="sprinkler-repair.html">Sprinkler Repair</a>
+      <a href="smart-controllers.html">Smart Controllers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:8134998485">&#9742; (813) 499-8485</a>
+      <a href="mailto:Dan@wateroakirrigation.com">Dan@wateroakirrigation.com</a>
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" target="_blank" rel="noopener">Book Online</a>
+      <a href="https://www.google.com/maps/place/Water+Oak+Irrigation/@28.0506559,-82.5741433,10z/data=!3m1!4b1!4m6!3m5!1s0x88c2c0c595bb8bd5:0x17e55d4e7108a5da!8m2!3d28.050445!4d-82.2438025!16s%2Fg%2F11vx1gt17s?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">&#11088; Google Reviews</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Water Oak Irrigation. All rights reserved.</p>
+    <p>Serving Tampa, Wesley Chapel, Brandon, St. Petersburg &amp; surrounding areas</p>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-sticky">
+  <a href="tel:8134998485" class="sticky-call">&#9742; Call Now</a>
+  <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="sticky-book" target="_blank" rel="noopener">Book Online</a>
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+
+  // Rain animation
+  (function () {
+    var wrap = document.getElementById('rain');
+    for (var i = 0; i < 28; i++) {
+      var d = document.createElement('div');
+      d.className = 'drop';
+      d.style.left = (Math.random() * 100) + '%';
+      d.style.height = (55 + Math.random() * 65) + 'px';
+      d.style.animationDuration = (0.55 + Math.random() * 0.75) + 's';
+      d.style.animationDelay = (Math.random() * 2.5) + 's';
+      d.style.opacity = (0.25 + Math.random() * 0.45);
+      wrap.appendChild(d);
+    }
+  })();
+
+  // Scroll reveal
+  var revealObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealObs.observe(el); });
+
+  // Animated counters
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.target, 10);
+    var suffix = el.dataset.suffix || '';
+    var duration = 1800;
+    var start = performance.now();
+    function tick(now) {
+      var p = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var statsObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('[data-target]').forEach(animateCounter);
+        statsObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  var statsEl = document.querySelector('.stats-section');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // FAQ accordion
+  function toggleFAQ(btn) {
+    var item = btn.closest('.faq-item');
+    var answer = item.querySelector('.faq-answer');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irrigation Design & Installation | Water Oak Irrigation</title>
+  <meta name="description" content="Professional irrigation system design and installation for Tampa Bay. Custom solutions, full permitting, efficient water management." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep: #1a2e6b;
+      --blue-mid: #2341a0;
+      --blue-bright: #2f55c8;
+      --blue-light: #6b8fe0;
+      --green-deep: #1a5c32;
+      --green-mid: #237a44;
+      --green-bright: #2da052;
+      --green-light: #5dc47a;
+      --gold: #f0c040;
+      --cream: #f4f7ff;
+      --white: #ffffff;
+      --dark: #0e1a3a;
+      --gray: #5a6a8a;
+      --gray-light: #e2e8f8;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 40px; height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(26, 46, 107, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107,143,224,0.2);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child {
+      font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+      color: var(--white); letter-spacing: 0.02em;
+    }
+    .logo-text span:last-child {
+      font-size: 10px; color: var(--green-light); letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a {
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--green-light); }
+    .nav-phone { color: var(--gold) !important; font-weight: 700 !important; }
+    .btn-header {
+      background: var(--green-bright); color: white !important; padding: 9px 20px;
+      border-radius: 5px; font-size: 13px !important; font-weight: 700 !important;
+      letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.2s !important;
+    }
+    .btn-header:hover { background: var(--green-deep) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    /* ── HERO ── */
+    .hero {
+      min-height: 60vh; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      background: var(--green-deep);
+      padding-top: 76px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 65% 50%, rgba(45,160,82,0.4) 0%, transparent 70%),
+        linear-gradient(135deg, #0c1840 0%, #1a2e6b 55%, #0e2050 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2; text-align: center;
+      padding: 80px 40px;
+      max-width: 900px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 60px); font-weight: 900; line-height: 1.1;
+      color: white; margin-bottom: 20px;
+    }
+    .service-subtitle {
+      font-size: 18px; line-height: 1.7; color: var(--green-light);
+      margin-bottom: 28px; font-weight: 500;
+    }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-bright); color: white; text-decoration: none;
+      padding: 15px 30px; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px;
+      transition: all 0.25s; border: 2px solid transparent;
+    }
+    .btn-primary:hover {
+      background: var(--green-deep); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45,160,82,0.4);
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: white; text-decoration: none;
+      padding: 15px 30px; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px;
+      border: 2px solid rgba(255,255,255,0.25); transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--green-light); color: var(--green-light); }
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: white; text-decoration: none; font-size: 14px; font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .back-link:hover { color: var(--green-light); }
+    /* ── SECTIONS ── */
+    section { padding: 96px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--blue-bright); margin-bottom: 14px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 48px); font-weight: 900; line-height: 1.1;
+      color: var(--dark); margin-bottom: 18px;
+    }
+    .section-intro { font-size: 16px; line-height: 1.75; color: var(--gray); max-width: 650px; font-weight: 300; }
+    /* ── BENEFITS ── */
+    .benefits-section { background: var(--white); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+    .benefit-card {
+      padding: 32px; background: var(--cream); border-radius: 12px;
+      border: 1px solid var(--gray-light); text-align: left;
+      transition: all 0.3s;
+    }
+    .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(26,46,107,0.1); }
+    .benefit-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .benefit-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .benefit-card p { font-size: 14px; line-height: 1.7; color: var(--gray); }
+    /* ── PROCESS ── */
+    .process-section { background: var(--cream); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; }
+    .process-step {
+      background: white; padding: 28px; border-radius: 12px; border: 1px solid var(--gray-light);
+      text-align: center; position: relative;
+    }
+    .step-number {
+      display: flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; background: var(--green-bright);
+      color: white; font-family: 'Playfair Display', serif; font-size: 24px;
+      font-weight: 700; border-radius: 50%; margin: 0 auto 16px;
+    }
+    .process-step h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+    .process-step p { font-size: 13px; line-height: 1.6; color: var(--gray); }
+    /* ── FAQ ── */
+    .faq-section { background: var(--white); }
+    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 52px; }
+    .faq-item {
+      padding: 28px; background: var(--cream); border-radius: 12px;
+      border: 1px solid var(--gray-light);
+    }
+    .faq-item h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .faq-item p { font-size: 14px; line-height: 1.7; color: var(--gray); }
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--blue-deep); color: white; text-align: center;
+      padding: 80px 40px;
+    }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--dark); padding: 18px 40px;
+      display: flex; justify-content: center; gap: 44px; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; }
+    .trust-item span:first-child { color: var(--green-light); font-size: 17px; }
+    /* ── FOOTER ── */
+    footer { background: var(--dark); padding: 60px 40px 32px; }
+    .footer-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+      padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: white; }
+    .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.4); max-width: 260px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--green-light); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto; padding-top: 26px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.28); }
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 76px; left: 0; right: 0; background: var(--blue-deep); padding: 24px 20px; gap: 18px; border-top: 1px solid rgba(255,255,255,0.1); z-index: 99; }
+      .hamburger { display: flex; }
+      section { padding: 64px 20px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .trust-bar { gap: 18px; padding: 14px 20px; }
+    }
+    @media (max-width: 560px) {
+      .process-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">
+    <div class="logo-text">
+      <span>Water Oak Irrigation</span>
+      <span>Tampa Bay's Trusted Experts</span>
+    </div>
+  </a>
+  <nav id="main-nav">
+    <a href="/#services">Services</a>
+    <a href="/#areas">Service Areas</a>
+    <a href="/#contact">Contact</a>
+    <a href="tel:8134998485" class="nav-phone">☎ (813) 499-8485</a>
+    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-header" target="_blank" rel="noopener">Book Now</a>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <a href="/#services" class="back-link">← Back to Services</a>
+    <h1>Irrigation Design & Installation</h1>
+    <p class="service-subtitle">Precision systems engineered for durability, efficiency, and full Tampa Bay compliance</p>
+    <div class="hero-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Book Free Estimate</a>
+      <a href="tel:8134998485" class="btn-secondary">Call (813) 499-8485</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span>🛡️</span> Full Permitting Compliance</div>
+  <div class="trust-item"><span>⭐</span> Design Experts</div>
+  <div class="trust-item"><span>💧</span> Water-Efficient Systems</div>
+</div>
+
+<section class="benefits-section reveal">
+  <div class="container">
+    <span class="section-label">Why Choose Our Design Service</span>
+    <h2>Expert Irrigation Design</h2>
+    <p class="section-intro">We create custom irrigation systems tailored to your landscape, soil type, and water sources. Every system is designed for optimal performance and longevity.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">🎯</span>
+        <h3>Precision Engineering</h3>
+        <p>Every system is designed with precision to ensure even water distribution across your entire landscape.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">💰</span>
+        <h3>Cost Savings</h3>
+        <p>Efficient design reduces water waste and lowers utility bills while maintaining a beautiful landscape.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">📋</span>
+        <h3>Full Permitting</h3>
+        <p>We handle all permits and inspections required by Hillsborough County and other Tampa Bay municipalities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process-section reveal">
+  <div class="container">
+    <span class="section-label">How We Work</span>
+    <h2>Our Design & Installation Process</h2>
+    <p class="section-intro">From initial assessment to system activation, we manage every step with precision and care.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Site Assessment</h3>
+        <p>We evaluate soil type, slope, water sources, and landscape features to design the optimal system.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Custom Design</h3>
+        <p>Our engineers create a detailed system design with proper zone planning and water distribution.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Permit & Install</h3>
+        <p>We obtain all required permits and handle professional installation with quality components.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Testing & Training</h3>
+        <p>Complete system testing, adjustment, and we show you how to operate your new irrigation system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section reveal">
+  <div class="container">
+    <span class="section-label">Common Questions</span>
+    <h2>Irrigation Design FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How long does a new irrigation system last?</h3>
+        <p>A professionally designed and installed system typically lasts 15-20 years with proper maintenance. Quality components and expert installation ensure durability in Tampa's climate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's included in the design service?</h3>
+        <p>Our design includes site assessment, CAD drawings, zone planning, component selection, permitting, and installation supervision to ensure your system performs optimally.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will my system meet water conservation requirements?</h3>
+        <p>Yes! We design all systems to exceed Florida Water Star standards and local water conservation requirements, helping you save money while protecting our environment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you design a system for an existing landscape?</h3>
+        <p>Absolutely. We specialize in retrofitting existing landscapes with new irrigation systems customized to your plant types, soil, and available water sources.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does a new system cost?</h3>
+        <p>Cost varies based on landscape size, complexity, and components. We provide free estimates after assessing your property. Most residential systems range from $3,000 to $10,000.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer financing options?</h3>
+        <p>Yes, we work with several financing partners to make new irrigation systems affordable. Ask us about payment plans during your free estimate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p class="cta-subtitle">Schedule a free site assessment with one of our irrigation design experts. We'll evaluate your landscape and provide a custom proposal.</p>
+    <div class="cta-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Book Free Estimate</a>
+      <a href="tel:8134998485" class="btn-secondary">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span>Water Oak Irrigation</span>
+      </a>
+      <p>Providing professional irrigation design and installation services for the Tampa Bay community.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="sprinkler-repair.html">Sprinkler Repair</a>
+      <a href="drainage-solutions.html">Drainage Solutions</a>
+      <a href="well-pump-service.html">Well Pump Service</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:8134998485">☎ (813) 499-8485</a>
+      <a href="#contact" onclick="document.location='mailto:info@wateroakirrigation.com'">📧 Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Water Oak Irrigation. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('main-nav').classList.toggle('open');
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

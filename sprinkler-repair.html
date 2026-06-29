@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprinkler Repair & Maintenance | Water Oak Irrigation</title>
+  <meta name="description" content="Professional sprinkler repair and maintenance services for Tampa Bay. Same-day service, zone failures, broken heads, underground leaks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Schema Markup for Sprinkler Repair Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sprinkler Repair & Maintenance",
+    "description": "Professional sprinkler repair and maintenance services for Tampa Bay including broken heads, underground leaks, zone valve failures, controller issues, and well pump service.",
+    "url": "https://wateroakirrigation.com/sprinkler-repair.html",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Water Oak Irrigation",
+      "telephone": "(813) 499-8485",
+      "email": "Dan@wateroakirrigation.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tampa",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": ["Tampa", "Wesley Chapel", "Brandon", "St. Petersburg", "Carrollwood", "Lake Magdalene", "Odessa"],
+    "serviceType": "Irrigation Repair",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "150"
+    },
+    "priceRange": "$75-$500",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sprinkler Repair Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Broken Sprinkler Head Replacement",
+          "price": "75-150",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Underground Leak Detection and Repair",
+          "price": "200-600",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Zone Valve Replacement",
+          "price": "150-350",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Controller Repair or Replacement",
+          "price": "150-500",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep: #1a2e6b;
+      --blue-mid: #2341a0;
+      --blue-bright: #2f55c8;
+      --blue-light: #6b8fe0;
+      --green-deep: #1a5c32;
+      --green-mid: #237a44;
+      --green-bright: #2da052;
+      --green-light: #5dc47a;
+      --gold: #f0c040;
+      --cream: #f4f7ff;
+      --white: #ffffff;
+      --dark: #0e1a3a;
+      --gray: #5a6a8a;
+      --gray-light: #e2e8f8;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 40px; height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(26, 46, 107, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(107,143,224,0.2);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child {
+      font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+      color: var(--white); letter-spacing: 0.02em;
+    }
+    .logo-text span:last-child {
+      font-size: 10px; color: var(--green-light); letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 600;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s; }
+    nav a:hover { color: var(--green-light); }
+    .nav-phone { color: var(--gold) !important; font-weight: 700 !important; }
+    .btn-header { background: var(--green-bright); color: white !important; padding: 9px 20px; border-radius: 5px; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.05em; text-transform: uppercase; transition: background 0.2s !important; }
+    .btn-header:hover { background: var(--green-deep) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    .hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #2341a0; padding-top: 76px; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 65% 50%, rgba(45,160,82,0.4) 0%, transparent 70%), linear-gradient(135deg, #0c1840 0%, #1a2e6b 55%, #0e2050 100%); }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 80px 40px; max-width: 900px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 60px); font-weight: 900; line-height: 1.1; color: white; margin-bottom: 20px; }
+    .service-subtitle { font-size: 18px; line-height: 1.7; color: var(--green-light); margin-bottom: 28px; font-weight: 500; }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--green-bright); color: white; text-decoration: none; padding: 15px 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px; transition: all 0.25s; border: 2px solid transparent; }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,160,82,0.4); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; text-decoration: none; padding: 15px 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 5px; border: 2px solid rgba(255,255,255,0.25); transition: all 0.25s; }
+    .btn-secondary:hover { border-color: var(--green-light); color: var(--green-light); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 20px; }
+    .back-link:hover { color: var(--green-light); }
+    section { padding: 96px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue-bright); margin-bottom: 14px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 900; line-height: 1.1; color: var(--dark); margin-bottom: 18px; }
+    .section-intro { font-size: 16px; line-height: 1.75; color: var(--gray); max-width: 650px; font-weight: 300; }
+    .benefits-section { background: var(--white); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+    .benefit-card { padding: 32px; background: var(--cream); border-radius: 12px; border: 1px solid var(--gray-light); text-align: left; transition: all 0.3s; }
+    .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(26,46,107,0.1); }
+    .benefit-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .benefit-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .benefit-card p { font-size: 14px; line-height: 1.7; color: var(--gray); }
+    .process-section { background: var(--cream); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; }
+    .process-step { background: white; padding: 28px; border-radius: 12px; border: 1px solid var(--gray-light); text-align: center; position: relative; }
+    .step-number { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--blue-bright); color: white; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; border-radius: 50%; margin: 0 auto 16px; }
+    .process-step h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+    .process-step p { font-size: 13px; line-height: 1.6; color: var(--gray); }
+    .faq-section { background: var(--white); }
+    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 52px; }
+    .faq-item { padding: 28px; background: var(--cream); border-radius: 12px; border: 1px solid var(--gray-light); }
+    .faq-item h3 { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--dark); }
+    .faq-item p { font-size: 14px; line-height: 1.7; color: var(--gray); }
+    .cta-section { background: var(--blue-deep); color: white; text-align: center; padding: 80px 40px; }
+    .cta-section h2 { color: white; margin-bottom: 16px; }
+    .cta-subtitle { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .trust-bar { background: var(--dark); padding: 18px 40px; display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; }
+    .trust-item span:first-child { color: var(--green-light); font-size: 17px; }
+    footer { background: var(--dark); padding: 60px 40px 32px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 14px; }
+    .footer-logo span { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: white; }
+    .footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.4); max-width: 260px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--green-light); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 26px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.28); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 76px; left: 0; right: 0; background: var(--blue-deep); padding: 24px 20px; gap: 18px; border-top: 1px solid rgba(255,255,255,0.1); z-index: 99; }
+      .hamburger { display: flex; }
+      section { padding: 64px 20px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .trust-bar { gap: 18px; padding: 14px 20px; }
+    }
+    @media (max-width: 560px) {
+      .process-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">
+    <div class="logo-text">
+      <span>Water Oak Irrigation</span>
+      <span>Tampa Bay's Trusted Experts</span>
+    </div>
+  </a>
+  <nav id="main-nav">
+    <a href="/#services">Services</a>
+    <a href="/#areas">Service Areas</a>
+    <a href="/#contact">Contact</a>
+    <a href="tel:8134998485" class="nav-phone">☎ (813) 499-8485</a>
+    <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-header" target="_blank" rel="noopener">Book Now</a>
+  </nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <a href="/#services" class="back-link">← Back to Services</a>
+    <h1>Sprinkler Repair & Maintenance</h1>
+    <p class="service-subtitle">Fast, reliable repairs for broken heads, zone failures, and underground leaks</p>
+    <div class="hero-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Repair</a>
+      <a href="tel:8134998485" class="btn-secondary">Call (813) 499-8485</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><span>⚡</span> Same-Day Emergency Service</div>
+  <div class="trust-item"><span>✅</span> Licensed & Permitted</div>
+  <div class="trust-item"><span>🔧</span> Expert Technicians</div>
+</div>
+
+<section class="benefits-section reveal">
+  <div class="container">
+    <span class="section-label">Why Choose Us</span>
+    <h2>Expert Sprinkler Repair</h2>
+    <p class="section-intro">We diagnose and fix all types of sprinkler system problems quickly, keeping your landscape healthy and green year-round.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="benefit-icon">⚡</span>
+        <h3>Emergency Service</h3>
+        <p>Weekend and on-call availability for urgent repairs. We respond quickly to prevent water waste and landscape damage.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">🔍</span>
+        <h3>Thorough Diagnostics</h3>
+        <p>We identify the root cause of system failures using advanced detection equipment for accurate, lasting repairs.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="benefit-icon">⌛</span>
+        <h3>Quick Turnaround</h3>
+        <p>Most repairs are completed same-day or within 24 hours, minimizing system downtime and water loss.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process-section reveal">
+  <div class="container">
+    <span class="section-label">How We Work</span>
+    <h2>Our Repair Process</h2>
+    <p class="section-intro">We follow a systematic approach to diagnose problems and implement lasting solutions.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Quick Assessment</h3>
+        <p>We inspect your system and identify the problem — broken heads, leaks, valve issues, or wiring failures.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Diagnosis</h3>
+        <p>Using professional tools, we pinpoint the exact issue and explain what caused the failure.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Expert Repair</h3>
+        <p>We fix the problem using high-quality replacement parts and professional techniques.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Testing & Verification</h3>
+        <p>Full system testing ensures everything works properly before we leave your property.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section reveal">
+  <div class="container">
+    <span class="section-label">Common Questions</span>
+    <h2>Sprinkler Repair FAQs</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How do I know if my sprinkler system needs repair?</h3>
+        <p>Look for pooling water, dry patches in your lawn, broken or misaligned heads, low water pressure, or visible leaks in your yard.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you repair systems from other companies?</h3>
+        <p>Yes! We service and repair all brands and types of sprinkler systems, regardless of who installed them.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How quickly can you respond to a broken system?</h3>
+        <p>We offer same-day service for most emergency repairs. Call us immediately and we'll get a technician out as soon as possible.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What causes underground sprinkler leaks?</h3>
+        <p>Common causes include soil shifting, pipe aging, root damage, or installation issues. We use professional leak detection to locate underground problems accurately.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer maintenance programs?</h3>
+        <p>Yes! Regular maintenance prevents problems and extends system life. We offer seasonal tune-ups and year-round maintenance plans.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the typical cost of a repair?</h3>
+        <p>Repair costs vary based on the problem. Simple fixes like replacing a broken head may cost $50-150, while larger repairs could be $200-500+. We provide estimates before starting work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Experiencing Sprinkler Problems?</h2>
+    <p class="cta-subtitle">Don't wait for more water waste or landscape damage. Schedule a repair today and get your system running properly again.</p>
+    <div class="cta-actions">
+      <a href="https://clienthub.getjobber.com/booking/f58cd97a-5f14-4bf1-b611-f6d788f2b8e5" class="btn-primary" target="_blank" rel="noopener">Schedule Repair Now</a>
+      <a href="tel:8134998485" class="btn-secondary">Emergency Call</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span>Water Oak Irrigation</span>
+      </a>
+      <p>Providing professional sprinkler repair and maintenance services for the Tampa Bay community.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="irrigation-design.html">Irrigation Design</a>
+      <a href="drainage-solutions.html">Drainage Solutions</a>
+      <a href="well-pump-service.html">Well Pump Service</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:8134998485">☎ (813) 499-8485</a>
+      <a href="#" onclick="document.location='mailto:info@wateroakirrigation.com'">📧 Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Water Oak Irrigation. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('main-nav').classList.toggle('open'); }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

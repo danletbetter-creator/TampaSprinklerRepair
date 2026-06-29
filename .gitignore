@@ -1,0 +1,6 @@
+# Business documents — keep off GitHub
+*.pdf
+*.docx
+*.xlsx
+*.xls
+*.doc
