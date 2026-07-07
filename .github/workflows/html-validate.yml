@@ -1,0 +1,15 @@
+name: HTML & Link Check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --verbose --no-progress './**/*.html'
+          fail: true
