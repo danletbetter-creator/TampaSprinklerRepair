@@ -104,7 +104,7 @@
 
     /* HERO */
     .hero { min-height: 78vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 76px; }
-    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 60% 50%, rgba(45,160,82,0.32) 0%, transparent 70%), linear-gradient(155deg, #080f28 0%, #1a2e6b 55%, #0a2018 100%); }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 60% 50%, rgba(45,160,82,0.32) 0%, transparent 70%), linear-gradient(155deg, rgba(8,15,40,0.82) 0%, rgba(26,46,107,0.72) 55%, rgba(10,32,24,0.85) 100%), url('easy-flow-drain-install-crew.jpg') center 30%/cover no-repeat; }
     .rain-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
     .drop { position: absolute; top: -120px; width: 1.5px; border-radius: 2px; background: linear-gradient(to bottom, transparent, rgba(107,180,224,0.4)); animation: fall linear infinite; }
     @keyframes fall { to { transform: translateY(110vh); } }
@@ -318,7 +318,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" role="img" aria-label="Water Oak Irrigation crew installing a French drain system with EasyFlow drainage tubing"></div>
   <div class="rain-wrap" id="rain"></div>
   <div class="hero-content">
     <a href="/#services" class="back-link">&#8592; Back to Services</a>
